@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>3D模块之正方体</title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			/*
+			 box-sizing 属性允许您以特定的方式定义匹配某个区域的特定元素。
+			例如，假如您需要并排放置两个带边框的框，可通过将 box-sizing 设置为 "border-box"。
+			这可令浏览器呈现出带有指定宽度和高度的框，并把边框和内边距放入框中。
+			 * */
+			ul{
+				width: 200px;
+				height: 200px;
+				border: 1px solid ;
+				box-sizing: border-box;
+				margin: 100px auto;
+				position: relative;/*父元素设置为相对定位*/
+				transform: rotateY(45deg) rotateX(70deg);
+				transform-style:preserve-3d ;/*父类元素设置3D模式*/
+				/*动画模块的连写形式：
+			 animation:动画名称   动画时长  动画运动速度   延迟时间   执行次数   往返动画；
+			 * */
+				animation: move 5s linear 1s  infinite normal;
+			}
+			@keyframes move{
+				from{ transform:rotateX(0deg) rotateY(0deg);}
+				to{ transform: rotateX(360deg) rotateY(360deg);}
+			}
+			ul li{
+				list-style: none;/*去除无序列表的小圆点*/
+				width: 200px;
+				height: 200px;
+				font-size: 60px;
+				text-align: center;	/*设置文字的居中*/
+				line-height: 200px;  /*设置文字的行高*/
+				position: absolute;/*子类元素设置绝对定位  设置定位后所有的都叠在一起 */
+				left: 0;
+				top: 0;
+			}
+			
+			/*单独设置每个框中的颜色*/
+			ul li:nth-child(1){
+				background-color: red;
+				transform: translate(-100px) rotateY(90deg);/*往左边偏移100px   绕y轴旋转90度    左面*/
+			}
+			ul li:nth-child(2){
+				background-color:greenyellow;
+				transform: translate(100px) rotateY(90deg)  ;           /*右面*/
+			}
+			ul li:nth-child(3){
+				background-color: yellow;
+				transform: translateY(-100px) rotateX(90deg)  /*往上平移100px  旋转90du*/
+			}
+			ul li:nth-child(4){
+				background-color:blue;
+				transform: translateY(100px) rotateX(90deg)  /*往下平移100px  旋转90du*/
+			}
+			ul li:nth-child(5){
+				background-color: blueviolet;
+				transform: translateZ(100px);        /*上面不需要旋转  直接往前移或者往后移*/
+			}
+			ul li:nth-child(6){
+				background-color: deeppink;
+				transform: translateZ(-100px);  
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li>一</li>
+            <li>二</li>
+			<li>三</li>
+			<li>四</li>
+			<li>五</li>
+			<li>六</li>
+			-->
+		</ul>
+	</body>
+</html>

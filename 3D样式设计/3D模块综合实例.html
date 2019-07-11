@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>3D模块综合实例</title>
+		<style type="text/css">
+			*{
+				padding:0 ;
+				margin: 0;
+			}
+			.box{
+				perspective: 700px;/*设置近大远小的效果*/
+			}
+			/*设置ul 的中心框*/
+			ul{
+				width: 200px;
+				height: 200px;
+				/*border: 1px solid;*/  /*完成后去掉边框*/
+				margin: 100px auto;
+				position: relative;
+				transform: rotateX(0deg) rotateY(0deg);
+				transform-style: preserve-3d;
+				/*添加一个动画效果*/
+				animation: sport 5s linear 0s infinite normal;/*名称  时间 均匀速度  0延时  无限次数  选择正方向*/
+			}
+			/**/
+			ul li{
+				list-style: none;
+				width:200px;
+				height:200px;
+				/*border:1px solid;*/
+				position: absolute;
+				left: 0;
+				top: 0;
+				transition: all 1s ease;
+				
+				
+			}
+			ul:hover {
+				animation-play-state: paused;
+			}
+			ul li:hover{
+				opacity: 1;
+				width:220px ;
+				height: 220px;
+			}
+			/*分别设置每个面的属性    注意 一个一个的设计*/
+			Ul li:nth-child(1){
+				background-image: url(CSS/3c876a48195e24a089d74beb15d5f2e4.jpg);
+				background-size: 100% 100%;
+				transform:  rotateX(90deg) translateZ(100px) scale(2,1);	/*设置为上面   scale(width height) 要放大的倍速*/
+			}
+			Ul li:nth-child(2){
+				background-image: url(CSS/6b0ba86101c25512a7f2e0822196088e.jpg);
+				background-size: 100% 100%;
+				transform: rotateX(180deg) translateZ(100px) scale(2,1); /*后面*/
+			}
+			Ul li:nth-child(3){
+				background-image: url(CSS/81816ab5f06ece96b06d4812a8489fbf.jpg);
+				background-size: 100% 100%;
+				transform:  rotateX(270deg) translateZ(100px) scale(2,1);	/*下面*/
+			}
+			Ul li:nth-child(4){
+				background-image: url(CSS/9c11e80fe085b5d6ef7ea9452b3c595d.jpg);
+				background-size: 100% 100%;
+				transform:  rotateX(360deg) translateZ(100px) scale(2,1);/*正面*/
+			}
+			Ul li:nth-child(5){
+				
+				transform:  rotateY( 90deg)  translateZ(-100px) ; /*左*/
+			}
+			Ul li:nth-child(6){
+				
+				transform:  rotateY( 90deg)  translateZ(100px) ; /*右*/
+			}
+			@keyframes sport{
+				from{transform: rotateX(0deg);}
+				to{transform: rotateX(360deg);}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+            	<li>5</li>
+				<li>6</li>
+			</ul>
+		</div>
+	</body>
+</html>

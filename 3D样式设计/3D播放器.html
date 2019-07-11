@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>3D播放器</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;			
+			}
+			body{
+				background: url(CSS/6b0ba86101c25512a7f2e0822196088e.jpg) no-repeat;
+				background-size: cover;/*无论浏览器有多大  都会自动居中显示*/
+			}
+			ul{
+				width: 200px;
+				height: 200px;
+				
+				position: absolute;  /*设置绝对定位  然它随着浏览器的大小改变始终保持一定的位置*/
+				bottom: 100px;
+				left: 50%;
+				transform-style: preserve-3d;/*设置3D模式*/
+				transform: rotateX(-30deg) rotateY(0deg);
+				animation: sport 6s linear 0s infinite  normal;
+			
+			}
+			ul li{
+				list-style: none;/*去掉小圆点*/
+				width: 200px;
+				height: 200px;
+				background-color: #000000;
+				font-size:60px ;
+				text-align: center;
+				line-height: 200px;
+				position: absolute;
+				left: 0;
+				top: 0;
+				
+			}
+			ul li:nth-child(1){
+				
+				transform: rotateY(60deg) translateZ(200px);/*y 旋转60度  向外移动200px*/
+			}
+			ul li:nth-child(2){
+				
+				transform: rotateY(120deg) translateZ(200px);
+			}
+			ul li:nth-child(3){
+				
+				transform: rotateY(180deg) translateZ(200px);
+			}
+			ul li:nth-child(4){
+				
+				transform: rotateY(240deg) translateZ(200px);
+			}
+			ul li:nth-child(5){
+				
+				transform: rotateY(300deg) translateZ(200px);
+		    }
+			ul li:nth-child(6){
+				
+				transform: rotateY(360deg) translateZ(200px);
+			}
+			ul li img{
+				width: 200px;
+				height: 200px;
+				border: 5px solid deepskyblue;
+				box-sizing: border-box;/*设置了边框 不改变框的大小*/
+			}
+			ul:hover{    
+				animation-play-state: paused;  /*触碰时暂停动画*/
+			}
+			ul:hover li img{
+				opacity: 0.5;
+			}
+			ul li:hover img{
+				opacity: 1;
+				width: 210px;
+				height: 210px;
+				transition: all 1000ms ease;
+			}
+			@keyframes sport{
+				from{transform: rotateX(-20deg) rotateY(0deg);}
+				to{ transform: rotateX(-20deg) rotateY(360deg);}
+			}
+			.box2{
+				width: 180px;
+				height: 180px;
+				
+				position: relative;
+				top: 300px;
+				left: 100px;
+				border-radius:210px  290px 230px 290px  ;
+				animation: sport2 4s linear 0s infinite normal;
+			}
+			.box2 #spanX{
+				display: block;
+				width: 200px;
+				height: 200px;
+				background-color: palegreen;
+				position: absolute;
+				left: 0;
+				top: 0;
+				border-radius:45% ;
+				transform-style: preserve-3d;
+				transform: rotateX( 0deg) rotateY(0deg);
+				animation: moves 1s linear 0s infinite  normal;
+				
+			}
+			.box2:hover{
+				animation-play-state: paused;
+			}
+			#spanX span{
+				display: block;
+				width: 200px;
+				height: 200px;
+				border: 1px solid red;
+				position: absolute;
+				left: 0;
+				top: 0;
+				border-radius:45% ;
+				
+			}
+			#spanX span:nth-child(1){
+				background-color: gold;
+				transform: rotateX(30deg);
+			}
+			#spanX span:nth-child(2){
+				background-color: greenyellow;
+				transform: rotateX(60deg);
+				
+			}
+			#spanX span:nth-child(3){
+				background-color: blue;
+				transform: rotateX(90deg);
+			}
+			#spanX span:nth-child(4){
+				background-color: plum;
+				transform: rotateX(120deg);
+			}
+			#spanX span:nth-child(5){
+				background-color: deeppink;
+				transform: rotateX(150deg);
+			}
+			#spanX span:nth-child(6){
+				background-color: red;
+				transform: rotateX(180deg);
+			}
+			@keyframes moves{
+				from{transform: rotateX( 0deg) rotateY(0deg);}
+				to{transform: rotateX( 360deg) rotateY(0deg);}
+			}
+			@keyframes sport2{
+				0%{
+					top: 0;
+					left: 100;
+				}
+				20%{
+					top: 50px;
+					left:1100px;
+				}
+				40%{
+					top: 400px;
+					left: 1100px;
+				}
+				60%{
+					top:400px ;
+					left:750px;
+				}
+				80%{
+					top: 400px;
+					left: 100px;
+				}
+				100%{
+					top: 0;
+					left: 0;
+				}
+
+
+			}
+</style>
+	</head>
+	<body>
+		<ul>
+			<li><img src="img/034378bdbcc178b2919f441c3386d223.jpg"/></li>
+			<li><img src="img/07199376e6639b424b270320d76b5d22.jpg"/></li>
+			<li><img src="img/1bc93d0f66c0c910234a14eda17c5fad.jpg"/></li>
+			<li><img src="img/2f9a3eef21be75b45b86cebde5cfca11.jpg"/></li>
+			<li><img src="img/e5569ceed1a946176f7c8e7019117e2d.jpg"/></li>
+			<li><img src="img/ee86ab0c3fce643a594c6e9135e700fc.jpg"/></li>
+		</ul> 
+		<div class="box2">
+			<span id="spanX">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</span>
+		</div>
+		
+	</body>
+</html>
