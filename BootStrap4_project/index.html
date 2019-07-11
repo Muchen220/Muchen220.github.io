@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		 <!-- Bootstrap CSS -->
+		 <link rel="stylesheet" href="css/bootstrap.min.css" />
+		  <!--引入自定义的样式文件-->
+		 <link rel="stylesheet" type="text/css" href="css/style.css"/>
+		 <!--引入图标样式-->
+		 <link rel="stylesheet" type="text/css" href="css/font-awesome.css"/>
+		 <!--给网页添加一些动画效果  引入 animate.css  + wow .js -->
+		 <link rel="stylesheet" href="css/animate.css" />
+		 <script type="text/javascript" src="js/wow.js" ></script>
+		 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		 <script type="text/javascript" src="js/jquery.min.js" ></script>
+		 <script type="text/javascript" src="js/popper.min.js" ></script>
+		 <script type="text/javascript" src="js/bootstrap.min.js" ></script>
+		
+		<title>BootStrap4</title>
+		
+	</head>
+	<body>
+		<!--导航部分  container 居中    navbar-brand 折叠    data-target表示指定目标将谁折叠
+			导航中添加fixed-top 可以将导航条固定在顶部
+		-->
+		<nav class="navbar navbar-expand-lg fixed-top">
+			<div class="container">
+				<a href="#" class="navbar-brand brand-style">手把手课堂</a>
+				<button class="navbar-toggler menu-btn-style" type="button" data-toggle="collapse" data-target="#collapseMenu" 
+						 aria-controls="collapseMenu" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="nav-toggler-icon menu-icon-style">川</span>
+						
+						
+				</button>
+				<!--导航菜单  
+					justify-content-end 移动到最右边
+					dropdown  下拉菜单
+				-->
+				<div class="collapse navbar-collapse justify-content-end" id="collapseMenu">
+					<ul class="navbar-nav dropdown ul-style">
+						<li class="nav-item dropdown-item">
+							<a href="#" class="nav-link menu-style">首页
+								<span class="sr-only">(current)</span>
+							</a>
+						</li>
+						
+						<li class="nav-item dropdown-item">
+							<a href="#" class="nav-link menu-style">论坛</a>
+						</li>
+						
+						<li class="nav-item dropdown-item">
+							<a href="#" class="nav-link menu-style">前端开发</a>
+						</li>
+						
+						<li class="nav-item dropdown-item">
+							<a href="#" class="nav-link menu-style">最新课程</a>
+						</li>
+						
+						<li class="nav-item dropdown-item">
+							<a href="#" class="nav-link menu-style">移动APP</a>
+						</li>
+						
+						<li class="nav-item dropdown-item">
+							<a href="#" class="nav-link menu-style">联系我们</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		
+		<!--主体部分
+			container-fluidr 流式布局，
+			container 固定宽度居中
+			margin:0 auto; 水平居中   但是存在问题，无法支持响应式
+			img-fludidr 图片流式布局
+		-->
+		<div class="container-fluidr">
+			<!--广告区-->
+			<div class="row">
+				<section id="ad-area">
+					<div class="container">
+						<!--添加wow动画    data-wow-duration 持续时间   data-wow-delay  延迟  -->
+						<div class="row wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
+							<div class="col-md-1"></div>
+							<div class="col-md-10">
+								<h1>BootStrap实战课程等你来战！</h1>
+								<p>
+									<span>本套课程适用于：1、Web开发人员；2、网站维护人员、管理人员</span><br />
+									<span>培训技能的目标：使用BootStrap框架快速构建响应式页面，告别传统Web前端</span>
+								</p>
+								<img src="img/t01a2471b289e138da8.png" class="ad-area-img"/>
+							</div>
+							<div class="col-md-1"></div>
+						</div>
+					</div>
+				</section>
+			</div>
+			
+			<!--分类区   鼠标可以点进去说明是一个a标签   alt 在图片无法显示时提示图片信息-->
+			<div class="row">
+				<section id="category-area">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-4 wow fadeInDown" data-wow-delay="0.2s">
+								<a href="#" target="_blank">
+									<img  src="img/001.png" class="img-fluid" alt="Android" />
+									<h3>Android开发</h3>
+									<p>Android开发交流、问题求助、实战安全分析</p>
+								</a>
+							</div>
+							<div class="col-md-4 wow fadeInDown" data-wow-delay="0.4s">
+								<a href="#" target="_blank">
+									<img  src="img/002.png" class="img-fluid"  alt="IOS" />
+									<h3>IOS开发</h3>
+									<p>IOS开发技术交流、海量IOS实战干货分享</p>
+								</a>
+							</div>
+							<div class="col-md-4 wow fadeInDown" data-wow-delay="0.6s">
+								<a href="#" target="_blank">
+									<img  src="img/003.png" class="img-fluid"  alt="嵌入式底层开发" />
+									<h3>嵌入式底层开发</h3>
+									<p>底层嵌入式开发、实战案例等技术交流讨论</p>
+								</a>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+			<!--html区-->
+			<div class="row">
+				<section id="html-area">
+					<div class="container">
+						<div class="row">
+							<!--从左往右移动-->
+							<div class="col-md-6 wow slideInLeft" data-wow-duration="0.5s">
+								<!--设置弹性盒模型-->
+								<div id="wrap">
+									<h2>HTML5前端开发</h2>
+									<p>一线资深前端开发工程师倾情打造！助你完成普通程序员到优秀工程师的华丽升级</p>
+									<p><span class="icon-style"><i class="icon-twitter"></i></span>使用HTML5与CSS3技术轻松实现设备自适应展示</p>
+									<p><span class="icon-style"><i class="icon-twitter"></i></span>清晰明确的语义代码结构，更高的可读性、更利于页面的维护</p>
+								</div>
+							</div>
+							<!--从右往左移动-->
+							<div class="col-md-6 wow slideInRight" data-wow-duration="0.5s">
+								<img class="img-fluid" src="img/004.png" alt="html5" />
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+			
+			<!--bootStrap区-->
+			<div class="row">
+				<section id="boot-area">
+					<div class="container">
+						<div class="row">
+							<!--从左往右移动-->
+							<div class="col-md-6 wow fadeInLeft" data-wow-duration="1s">
+								<img  class="img-fluid" src="img/005.png"  alt="BootStrap"/>
+							</div>
+							<!--从右往左移动-->
+							<div class="col-md-6 wow fadeInRight" data-wow-duration="1s">
+								<div class="warp">
+									<div id="wrap">
+										<h2>BootStrap实战视频教程</h2>
+										<p>BootStrap是最受欢迎的HTML/CSS和JS框架，用于开发响应式布局、移动设备优先的Web项目</p>
+										<p><span class="icon-style"><i class="icon-twitter"></i></span>你的网站和应用在BootStrap的帮助下，通过同一份代码的快速、有效适配手机、苹果、平板、PC设备</p>
+										<p><span class="icon-style"><i class="icon-twitter"></i></span>BootStrap提供了全面、美观的文档，你能在这里找到关于HTMML元素、HTML和CSS组件、JQuery插件方面的所有详细文档</p>
+								</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+			<!--课程区-->
+			<div class="row">
+				<section id="course-area">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+								<h2>最新课程</h2>
+							</div>
+						</div>
+						<div class="row">
+							<!--逐步显示  所以动画延迟要不一样-->
+							<div class="col-lg-3 col-md-6 col-sm-12 wow fadeIn" data-wow-duration="2s" data-wow-delay="0.2s">
+								<div class="course">
+									<img src="img/006.jpg" class="img-fluid" alt="course-img" />
+									<!--将链接改成按钮形式   btn btn-outline-success-->
+									<a href="#" class="btn btn-outline-success" target="_blank">加入学习</a>
+								</div>
+							</div>
+							<div class="col-lg-3 col-md-6 col-sm-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
+								<div class="course">
+									<img src="img/006.jpg" class="img-fluid" alt="course-img" />
+									<a href="#" class="btn btn-outline-success" target="_blank">加入学习</a>
+								</div>
+							</div>
+							<div class="col-lg-3 col-md-6 col-sm-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.6s">
+								<div class="course">
+									<img src="img/006.jpg" class="img-fluid" alt="course-img" />
+									<a href="#" class="btn btn-outline-success" target="_blank">加入学习</a>
+								</div>
+							</div>
+							<div class="col-lg-3 col-md-6 col-sm-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
+								<div class="course">
+									<img src="img/006.jpg" class="img-fluid" alt="course-img" />
+									<a href="#" class="btn btn-outline-success" target="_blank">加入学习</a>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-3 col-md-6 col-sm-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="1s">
+								<div class="course">
+									<img src="img/006.jpg" class="img-fluid" alt="course-img" />
+									<!--将链接改成按钮形式   btn btn-outline-success-->
+									<a href="#" class="btn btn-outline-success" target="_blank">加入学习</a>
+								</div>
+							</div>
+							<div class="col-lg-3 col-md-6 col-sm-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="1.2s">
+								<div class="course">
+									<img src="img/006.jpg" class="img-fluid" alt="course-img" />
+									<a href="#" class="btn btn-outline-success" target="_blank">加入学习</a>
+								</div>
+							</div>
+							<div class="col-lg-3 col-md-6 col-sm-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="1.4s">
+								<div class="course">
+									<img src="img/006.jpg" class="img-fluid" alt="course-img" />
+									<a href="#" class="btn btn-outline-success" target="_blank">加入学习</a>
+								</div>
+							</div>
+							<div class="col-lg-3 col-md-6 col-sm-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="1.6s">
+								<div class="course">
+									<img src="img/006.jpg" class="img-fluid" alt="course-img" />
+									<a href="#" class="btn btn-outline-success" target="_blank">加入学习</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+			<!--下载区-->
+			<div class="row">
+				<section id="download-area">
+					<div class="container">
+						<!--从下往上-->
+						<div class="row wow fadeInUp" data-wow-duration="1s">
+							<div class="col-md-6 " >
+								<!--由于与bootStrap样式一致，所以引入warp样式-->
+								<div class="warp">
+									<h2>手把手课堂移动APP下载</h2>
+									<p>全新UI交互，与新闻网站数据同步，更加丰富的课程，开启精彩无限，语音搜索课程，喊出你想要的课程，一键收藏，方便自己重复学习，离线下载课程，在哪都能开</p>
+									<div>
+										<button type="button" class="btn btn-success">
+											<span class="download-icon-style"><i class="icon-download-alt"></i></span>iPhone版
+										</button>
+										<button type="button" class="btn btn-success">
+											<span class="download-icon-style"><i class="icon-download-alt"></i></span>Android版
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<img src="img/007.png" class="img-fluid" alt="app-download"/>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+			
+			<!--链接区-->
+			<div class="row">
+				<section id="link-area">
+					<div class="container">
+						<div class="row">
+							<!--从左往右-->
+							<div class="col-md-6 wow slideInLeft" data-wow-duration="1s">
+								<div class="warp">
+									<h2>联系手把手课堂</h2>
+									<p><span class="icon-style"><i class=" icon-twitter"></i></span>手把手课堂入驻网易云课堂的在线教育机构，目前已经拥有2000用户，100以上APP下载量，50小时视频内容，我们从不说空话，专注于IT在线教育，解脱传统的教育束缚，让你走到哪，学到哪 </p>
+									<address>
+										<p><span class="icon-style"><i class="icon-home"></i></span>地址：湖南省长沙市岳麓区</p>
+										<p><span class="icon-style"><i class="icon-phone-sign"></i></span>联系电话：18711161317</p>
+										<p><span class="icon-style"><i class="icon-envelope-alt"></i></span>邮箱：2017102225@hotmail.com</p>
+									</address>
+								</div>	
+							</div>
+							<!--从右往左-->
+							<div class="col-md-6 wow slideInRight"  data-wow-duration="1s">
+								<!--表单内容  form-row  表单格式   form-group 增加间距-->
+								<form action="#" method="post">
+									<div class="form-row form-group">
+										<div class="col">
+											<input type="text" class="form-control" placeholder="您的姓名" />
+										</div>
+										<div class="col">
+											<input type="text" class="form-control" placeholder="您的邮箱" />
+										</div>
+									</div>
+									
+									<div class="form-row form-group">
+										<div class="col">
+											<input type="text" class="form-control" placeholder="标题" />
+										</div>
+									</div>
+									
+									<div class="form-row form-group">
+										<div class="col">
+											<!--文本域-->
+											<textarea class="form-control" row="4" placeholder="留言"></textarea>
+										</div>
+									</div>
+									
+									<div class="form-row form-group">
+										<div class="col">
+											<!--按钮变大 变成块状元素  btn-lg btn-block-->
+											<input type="submit" class="btn btn-success btn-lg btn-block" value="提交" />
+										</div>
+									</div>
+								</form>
+								
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+			
+		</div>
+		
+		<!--底部-->
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<p>Copyright&copy;2018-2022 www.hhh.com 湘ICP备000000000001号</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+	<!--把WOW插件初始化wow
+		前面两个使用次数最多
+		data-wow-duration 持续时间
+		data-wow-delay:延迟
+		data-wow-offset:偏移
+		data-wow-iteration:重复次数
+	-->
+	<script>
+		new WOW().init();
+	</script>
+	</body>
+</html>

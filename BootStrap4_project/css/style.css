@@ -1,0 +1,236 @@
+/*修改全局样式*/
+/**｛
+	font-family:"微软雅黑".Arial;
+｝*/
+
+/*导航的样式   !important 设置优先级 */
+*{
+	padding: 0;
+	margin: 0;
+}
+
+/*使用媒体查询,解决在手机端上下之间的间距*/
+@media (max-width: 767.98px) {
+	/*找到需要添加间距的div*/
+	section#html-area div.col-md-6{
+		margin-top: 10px;
+	}
+	section#boot-area div#wrap h2,section#download-area div.col-md-6{
+		margin-top: 20px;
+	}
+	
+}
+a.brand-style{
+	font-size: 28px;
+	color:darkturquoise;
+	font-weight: bolder;/*字体加粗*/
+}
+/*鼠标经过样式*/
+a.brand-style:hover{
+	color:gainsboro;
+}
+
+/*修改菜单栏样式*/
+a.menu-style{
+	font-size: 16px;
+	font-weight: bolder;
+	color: black;
+}
+
+/*更改按钮样式*/
+button.menu-btn-style{
+	width: 45px;
+	height: 30px;
+	background-color: ghostwhite;
+	padding: 0px;
+	outline: none;
+}
+button.menu-btn-style:hover{
+	background-color: gray;
+}
+span.menu-icon-style{
+	width: 25px;
+	height: 25px;
+}
+
+ul.ul-style{
+	background-color: white;
+}
+/*广告区域*/
+section#ad-area{
+	width: 100%;
+	height: 100%;
+	padding: 30px 0px;
+	color: #FFFFFF;
+	background: mediumseagreen;
+	margin-top: 68px;/*距离导航栏距离*/
+}
+section#ad-area h1{
+	font-weight: bolder;
+	/*文本居中*/
+	text-align: center;
+}
+section#ad-area p{
+	font-size: 14px;
+	text-align: center;
+	margin-top: 16px;
+	line-height: 30px;/*设置行高 */
+}
+/*广告图片*/
+img.ad-area-img{
+	margin-top: 20px;
+	width: 100%;
+}
+
+/*分类区域*/
+section#category-area{
+	width: 100%;
+	height: 100%;
+	padding: 50px 0px;
+	/*文本居中*/
+	text-align: center;
+}
+section#category-area a{
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+	color: #000000;
+	text-decoration: none;/*去掉下划线*/
+	padding: 20px 0px 10px 0px;/*分别为 上 右 下 左 设置内边距 */
+}
+section#category-area a>h3{
+	font-weight: bolder;
+	margin-top: 20px;
+}
+section#category-area a>p{
+	font-size: 14px;
+}
+section#category-area a>img{
+	border-radius: 43%;
+}
+/*鼠标经过触发效果*/
+section#category-area a:hover{
+	background-color:#f1f1f1;
+	box-shadow: 2px 2px 5px #cccccc; /*添加阴影实现立体效果部分  下  右  阴影长度  颜色*/
+}
+
+/*HTML5区域  及 链接区域*/
+section#html-area,section#link-area{
+	width: 100%;
+	height: 100%;
+	padding: 50px 0px;
+	background-color: #f8f8f8;
+}
+/*共用样式,用逗号隔开*/
+section#html-area div#warp ,section#boot-area div.warp,section#download-area div.warp,section#link-area div.warp{
+	display: flex;/*设置弹性盒模型*/
+	display: -webkit-flex; /*兼容谷歌浏览器*/
+	width: 100%;
+	height: 100%;
+	flex-direction: column;	/*垂直排列*/
+	flex-wrap: nowrap;	  	/*不换行*/
+	justify-content: center;/*内容对齐方式居中*/
+}
+section#html-area h2,section#boot-area h2,section#download-area h2,section#link-area h2{
+	font-weight: bolder;
+}
+section#html-area p,section#boot-area p,section#download-area p,section#link-area p{
+	font-size: 14px;
+}
+
+section#html-area span.icon-style,section#boot-area span.icon-style{
+	color: white;
+	display: inline-block;/*span是一个行级元素，给它设置为块级元素*/
+	width:30px;
+	height: 30px;
+	background-color: #41D2B1;
+	border-radius: 50%;
+	text-align: center;		/*水平居中*/
+	vertical-align: middle;	/*垂直居中*/
+	line-height: 30px; 		/*设置行高*/
+	margin-right: 10px;
+}
+section#html-area img{
+}
+
+/*BootStrap区域  ,   app下载区域*/
+section#boot-area,section#download-area{
+	width: 100%;
+	height: 100%;
+	padding: 50px 0px;
+	background-color: white;
+}
+
+/*最新课堂区域*/
+section#course-area{
+	width: 100%;
+	height: 100%;
+	padding: 50px 0px;
+	background-color: #f8f8f8;
+}
+section#course-area h2{
+	font-weight: bolder;
+	text-align: center;
+	margin-bottom: 30px;
+}
+section#course-area div.course{
+	width: 275px;
+	height: 255px;
+	background-color: white;
+	text-align: center;
+	margin: 10px auto;
+}
+section#course-area div.course img{
+	width: 100%;
+	height: 70%;
+}
+section#course-area div.course a{
+	margin-top: 21px;
+}
+
+/*下载区域*/
+section#download-area span.download-icon-style{
+	margin-right: 5px;
+}
+section#download-area button{
+	margin-right: 20px;
+}
+
+/*联系区域*/
+section#link-area{
+	background-image: url(../img/010.png);
+	background-repeat:no-repeat;
+	background-size: cover;/*背景完全覆盖*/
+	-webkit-background-size: cover;/*浏览器兼容*/
+	position: relative;/*给父元素设置相对定位*/
+	color: white;
+}
+/*在联系区前面添加一层,制造透明层次*/
+section#link-area:before{
+	border: 1px solid;
+	content:'';
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.6);/*背景设置透明程度*/
+	position: absolute;/*子元素绝对定位*/
+	top: 0px;
+	left: 0px;
+	
+}
+section#link-area span.icon-style{
+	margin-right: 0px;
+	display: inline-block;/*span是一个行级元素，给它设置为块级元素*/
+	width:30px;
+	height: 30px;
+}
+
+/*底部区域*/
+footer{
+	text-align: center;
+	font-size: 14px;
+}
+footer p{
+	line-height: 37px;/*文字垂直居中*/
+}
+
