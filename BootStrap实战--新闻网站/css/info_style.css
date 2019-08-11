@@ -1,0 +1,94 @@
+/*新闻详细内容页面*/
+*{
+	padding: 0;
+	margin: 0;
+}
+nav li:hover{
+	background-color: gainsboro;
+}
+section div#news-info h1{
+	font-weight: bolder;
+}
+section div#news-info span {
+	margin-right: 5px;
+	color: gray;
+	font-size: 14px;
+	font-weight: bolder;
+}
+section div#news-info span i{
+	margin-right: 5px;
+	color:#007BFF;
+}
+section div#news-info div.news-content{
+	margin-top: 20px;
+	font-size: 15px;
+	line-height: 1.5;
+}
+
+section div#news-info div.news-content img{
+	margin: 10px 0px;
+	width: 96%;
+	max-height: 360px;
+}
+
+section div#news-about {
+	margin-top: 10px;
+	border: 1px solid gainsboro;
+	border-radius: 5px;
+	background-color:whitesmoke;
+	
+}
+section div#news-about div.h3{
+	font-weight: bolder;
+	margin-left: 10px;
+}
+section div#news-about div.news-about-info{
+	width: 98%;
+	margin: 10px auto;
+}
+section div#news-about div.news-about-info:hover{
+	background-color: gainsboro;
+}
+/*去除左右padding*/
+section div#news-about div.news-about-info div.no-padding-h{
+	padding-left: 0px;
+	padding-right: 0px;
+}
+section div#news-about div.news-about-info img{
+	width: 100%;
+	height: 100%;
+	border-radius: 3px;
+	
+}
+section div#news-about div.news-about-info p{
+	margin-top: 5px;
+	line-height: 1.5;
+}
+section div#news-about div.news-about-info p a{
+	margin-right: 10px;
+}
+
+/*底部*/
+footer{
+	margin-top: 20px;
+	width: 100%;
+	text-align: center;
+	background-color: gainsboro;
+}
+footer p{
+	margin-top: 10px;
+}
+
+/*登录*/
+div#login-area h1{
+	font-weight: bolder;
+}
+div#login-area form label{ 
+	
+}
+
+/*底部*/
+footer.footer-style{
+	font-weight: bolder;
+	background-color:white;
+}

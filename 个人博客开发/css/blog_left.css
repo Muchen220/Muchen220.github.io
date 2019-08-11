@@ -1,0 +1,331 @@
+	body{
+			width: 900px;
+			background: beige;
+			margin-top: 15px;
+			margin: 0 auto;
+			
+		/*	border: 1px solid;*/
+		}
+		 *{padding: 0;margin: 0;}
+		article{
+			width: 100%;
+			height: 240px;
+		}
+		
+		.pictures_show{
+			
+			width: 75%;
+			height: 240px;
+			/*border: 1px solid;*/
+			float: left;
+		}
+		.pictures_show .carousel-inner {
+			width: 100%;
+			height: 240px;
+		}
+		.pictures_show .carousel-inner .item{
+			width: 100%;
+			height: 240px;
+		}
+		.pictures_show .carousel-inner .item img{
+			width: 100%;
+			height: 240px;
+		}
+		
+		.side_text{
+			width: 20%;
+			height: 240px;
+			border: 1px solid;
+			float: left;
+			
+		}
+		.side_text section{
+			width: 100%;
+			height: 50%;
+			border: 1px solid red;
+			padding-left: 5px;
+			text-indent: 10px; /*设置文字距离左侧的宽度*/
+			line-height: 18px;
+		}
+		.side_text section p{
+			color: gray;
+			
+		}
+		
+		.article_nav{
+			margin-top: 20px;
+			width: 95%;
+			height: 40px;
+			/*border: 1px solid;*/
+			border-bottom: 3px solid mediumvioletred;
+		}
+		a{
+			text-decoration: none;
+			color: #000000;
+		}
+		.article_nav h4{
+			float: left;
+			margin-top: 5px;
+		}
+		.article_nav span a{
+			float: right;
+			color: gray;
+			font-size: 14px;
+			/*border: 1px solid;*/
+			padding-right: 20px;
+			line-height: 40px;
+		}
+		.article_nav span a:hover{
+			color: black;
+		}
+		
+		
+		.content_info{
+			width: 95%;
+		}
+		.content_info .blogs{
+			margin-top: 10px;
+			width: 100%;
+			height: 180px;
+			border-bottom: 2px solid gray;
+			
+		}
+		
+		.content_info .blogs:hover{
+			background-color: white;
+		}
+		
+		.content_info .blogs .blogs_img{
+			width: 140px;
+			height: 140px;
+			border: 2px solid gainsboro;
+			margin-top: 15px;
+			margin-left: 20px;
+			float: left;
+			overflow: hidden;
+		}
+	
+		.content_info .blogs .blogs_img img{
+			width: 98%;
+			height:98%;
+			margin: 1%;
+			padding: 0;
+		}
+		.content_info .blogs .blogs_img img:hover{
+			transition: all 0.8s; 
+			width: 110%;
+			height: 110%;
+			margin-left: -7px;
+			margin-top: -5px;
+			
+		}
+		
+		/*文章内容区*/
+		.content_info .blogs .blog_session{
+			
+			width: 75%;
+			height: 100%;
+		/*	border: 1px solid;*/
+			float:right;
+			padding-top: 5px;
+			
+		}
+		.content_info .blogs .blog_session h4>a{
+			font-size: 20px;
+			color: black;
+			
+		/*	padding-left: 10px;*/
+		}
+		.content_info .blogs .blog_session h4>a:hover{
+			color: lightseagreen;
+		}
+		.content_info .blogs .blog_session p{
+			color: gray;
+			padding-left: 20px;
+		}
+		.content_info .blogs .blog_session span{
+			padding-top: 10px;
+		}
+		.content_info .blogs .blog_session span,a{
+			color: gray;
+		}
+		
+		.content_info .blogs .blog_session .f_l{
+			float: left;
+			margin-left: 5px;
+			padding-left: 5px;
+		}
+		.content_info .blogs .blog_session .f_r{
+			float: right;
+			padding-right: 25px;
+		}
+		
+
+
+/*分页*/
+		.pagelist .pages{
+			/*border: 1px solid;*/
+			margin-top: 10px;
+		}
+		.pagelist .pages b{
+			color: white;
+			background-color: orangered;
+			padding:2px 9px;
+		}
+		.pagelist .pages a{
+			border: 1px solid;
+			padding:2px 9px;
+			border-color: orangered;
+			color: black;
+			text-decoration: none;
+		}
+		.pagelist .pages a:hover{
+			color: white;
+			background-color: orangered;
+		}
+		
+
+/* blog_page css  */
+.pagelist .pages{
+			/*border: 1px solid;*/
+		}
+		.pagelist .pages b{
+			color: white;
+			background-color: orangered;
+			padding:5px 15px;
+		}
+		.pagelist .pages a{
+			border: 1px solid;
+			padding:5px 15px;
+			border-color: orangered;
+			color: black;
+			text-decoration: none;
+		}
+		.pagelist .pages a:hover{
+			color: white;
+			background-color: orangered;
+		}
+		
+/* write_blog page CSS*/
+.blog_article{
+			/*border: 1px solid;*/
+			width: 95%;
+		
+		}
+		.blog_article li{
+			height: 40px;
+			margin-top: 20px;
+		}
+		.blog_article li input:nth-child(1){
+			border: 1px solid gainsboro;
+			border-radius: 3px;
+			margin: 0 auto;
+			width: 100%;
+			height:100%;
+			text-indent: 20px;
+			font-size: 16px;
+			background-color:rgba(245,245,245,0.8);
+		}
+		ul .auto_li {
+			/*border: 1px solid;*/
+			height: auto;
+			position: relative;
+		}
+		.blog_article li textarea{
+			width: 100%;
+			height: 400px;
+			border: 1px solid gainsboro;
+			border-radius: 5px;
+			resize: none;  /*设置不能够拉伸*/
+			text-indent: 10px;
+		}
+		ul  .li_label input{
+			height: 30px;
+			width: 300px;
+			text-indent: 10px;
+			border: 1px solid gainsboro;
+			border-radius: 3px;
+			background-color:rgba(245,245,245,0.8);
+		} 
+		ul li select{
+			border: 1px solid gray;
+			width: 100px;
+			height: 26px;
+			text-align: center;
+			border-radius: 2px;
+		}
+		ul li .btns{
+			width: 100px;
+			height: 40px;
+			border: 1px solid  red;
+			background-color: white;
+			border-radius: 5px;
+			font-size: 16px;
+			color: red;
+		}
+		ul li .btns:nth-child(2){
+			margin-left: 30px;
+			border: 1px solid  gray;
+			color: gray;
+		}
+/*blogs_article page CSS*/
+
+	.article_nav h4{
+			color: black;
+		}
+		.article_nav h4 a{
+			color: gray;
+			margin-left: 10px;
+		}
+		.article_nav h4 a:hover{
+			color: black;
+			
+		}
+		.wenzhang h3{
+			text-indent: 3px;
+		}
+		.wenzhang .news_author span{
+			margin-left: 20px;
+			color: gray;
+		}
+		.wenzhang .news_author span:nth-child(1) i{
+			color: deepskyblue;
+		}
+		.wenzhang .news_author span:nth-child(2) i{
+			color: springgreen;
+		}
+		
+		.news_content p{
+			font-size: 14px;
+			line-height: 28px;
+		}
+		.news_content p img{
+			width: 70%;
+			height: 260px;
+			border: 1px solid;
+		}
+		
+		.copyright_author p a{
+			color: #00BFFF;
+		}
+		
+		.copyright_author p a:hover{
+		   color: orangered;	
+		}
+		.nextpage p{
+			text-align: center;
+		}
+		.nextpage p a{
+			color: #00BFFF;
+		}
+		
+		.nextpage p a:hover{
+			color: orangered;
+		}
+		.nextpage p b{
+			margin-left: 10px;
+
+		}
+		.copyright_author{
+		text-align: center;
+		}

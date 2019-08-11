@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>分页</title>
+	</head>
+	<style type="text/css">
+		.pagelist .pages{
+			/*border: 1px solid;*/
+		}
+		.pagelist .pages b{
+			color: white;
+			background-color: orangered;
+			padding:5px 15px;
+		}
+		.pagelist .pages a{
+			border: 1px solid;
+			padding:5px 15px;
+			border-color: orangered;
+			color: black;
+			text-decoration: none;
+		}
+		.pagelist .pages a:hover{
+			color: white;
+			background-color: orangered;
+		}
+	</style>
+	<body>
+		
+		 <div  class="pagelist">
+		  	<div class="pages" style="text-align:center;">
+		&nbsp;
+		<span>每页15条记录/共244条</span>
+		&nbsp;
+			<b>1</b>
+					<a href="/memory/index?tag=3&page=2" onclick="this.blur()">2</a>
+					<a href="/memory/index?tag=3&page=3" onclick="this.blur()">3</a>
+					<a href="/memory/index?tag=3&page=4" onclick="this.blur()">4</a>
+					<a href="/memory/index?tag=3&page=5" onclick="this.blur()">5</a>
+					<a href="/memory/index?tag=3&page=6" onclick="this.blur()">6</a>
+					<a href="/memory/index?tag=3&page=7" onclick="this.blur()">7</a>
+					<a href="/memory/index?tag=3&page=8" onclick="this.blur()">8</a>
+					<a href="/memory/index?tag=3&page=9" onclick="this.blur()">9</a>
+					<a href="/memory/index?tag=3&page=10" onclick="this.blur()">10</a>
+					<a class="next" onclick="this.blur()" href="/memory/index?tag=3&page=2">&gt;&gt;</a>
+				    <a class="last" href="/memory/index?tag=3&page=17" onclick="this.blur()">17</a>
+			</div>
+	  </div>
+	</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>博文发表</title>
+		<link rel="stylesheet" href="css/blog_left.css" />
+		<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	</head>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			min-width: 900px;
+			background-color: beige;
+			/*border: 1px solid;*/
+			height: 100%;	 /*随着高度拉伸*/
+			overflow-y: auto;/*启用滚动条*/
+			margin: 0 auto;
+		}
+		li{list-style: none;}
+		
+	</style>
+	<body>
+		<div>
+			<form>
+			<ul class="blog_article">
+				<li>
+					<input type="text" name="" id="" value="" placeholder="输入文章标题" />
+				</li>
+				<li class="auto_li">
+					<textarea placeholder="文章内容"></textarea>
+				</li>
+				<li class="li_label">
+					<label>文章标签:</label>
+					<input type="text" name="" id="" value="" />
+				</li>
+				<li>
+					<label>文章分类:</label>
+					<select>
+						<option value="0">生活点滴</option>
+						<option value="1">经验分享</option>
+						<option value="2">技术学习</option>
+						<option value="3">经典项目</option>
+					</select>
+				</li>
+				<li>
+					<label>文章设置:</label>
+					<select>
+						<option value="0">公开</option>
+						<option value="1">隐藏</option>
+					</select>
+				</li>
+				<li style="margin-left: 20%;" >
+					<button type="submit" class="btns">发布博文</button>
+					<button type="button" class="btns">取消发布</button>
+				</li>
+				<li></li>
+			</ul>
+			</form>
+		</div>
+	</body>
+</html>

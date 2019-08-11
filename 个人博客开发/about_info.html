@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>个人信息</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/about_me.css" />
+	</head>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		body{
+			width: 100%;
+			margin: 20px auto;
+			min-width: 1200px;
+			background-color: beige;
+		}
+		
+	</style>
+	<script>
+		function show(){
+			var box =document.getElementById("show");
+			var over=document.getElementById("over");
+			box.style.display="block";
+			over.style.display="block";
+		}
+		function hide(){
+			var box =document.getElementById("show");
+			var over=document.getElementById("over");
+			box.style.display="none";
+			over.style.display="none";
+		}
+		
+	</script>
+	<body>
+		<div class="about_info">
+			<div class="about_nav">
+				<p><strong>个人信息</strong> </p>
+				<p ><i class="glyphicon glyphicon-edit"><a href="javascript:show()">编辑</a></i></p>
+			</div>
+			<hr style="width: 97%; margin: 10px auto; border: 1px solid gainsboro; " />
+			<div class="user_manage">
+				<table>
+					<tr>
+						<th><span>昵称</span></th>
+						<td>admin</td>
+					</tr>
+					<tr>
+						<th><span>密码</span></th>
+						<td>******</td>
+					</tr>
+					<tr>
+						<th><span>个性签名</span></th>
+						<td>醉卧沙场君莫笑！！</td>
+					</tr>
+					<tr>
+						<th><span>个人描述</span></th>
+						<td>admin</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div id="show" >
+			<div class="edit_info" >
+				<form action="" method="post">
+					<a href="javascript:hide()">关闭</a>
+					<h4><strong>编辑个人信息</strong></h4>
+					<ul>
+						<li>
+							<label><strong>昵称:</strong></label>
+							<input type="text" name="" id="" value=""/>
+						</li>
+						<li>
+							<label><strong>个性签名:</strong></label>
+							<input type="text" name="" id="" value=""  />
+						</li>
+						<li id="li_3">
+							<label id="lable3"><strong>个人描述:</strong></label><br />
+							<textarea placeholder="个人描述..."></textarea>
+						</li>
+						<li id="li_4">
+							<input type="submit" value="确定" class="btn"/>
+							<input type="button" value="取消"  class="btn"/>
+						</li>
+					</ul>
+				</form>
+			</div>
+		</div>
+		<div id="over">
+			
+		</div>
+	</body>
+</html>

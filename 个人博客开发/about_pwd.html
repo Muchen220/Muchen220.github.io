@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>编辑个人信息</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/about_me.css" />
+	</head>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		body{
+			width: 100%;
+			min-width: 1200px;
+			/*border: 1px solid;*/
+			margin: 20px auto;
+			background-color: beige;
+		}
+		
+	</style>
+	<body>
+		<div class="box">
+			<div class="about_nav">
+				<p><strong>修改密码</strong> </p>
+			</div>
+			<hr style="width: 97%; margin: 10px auto; border: 1px solid gainsboro; " />
+			<div class="user_manage">
+				<form action="" method="post" onsubmit="return checkNull()">
+				<table >
+					<tr>
+						<th><span>原密码</span></th>
+						<td style="border-bottom: none;">
+							<input type="password" name="" id="" value="" placeholder="原密码"/>
+						</td>
+					</tr>
+					<tr>
+						<th><span>新密码</span></th>
+						<td style="border-bottom: none;">
+							<input id="upwd" name="upwd" data-form="upwd" type="password" placeholder="请输入密码" min="6"
+                        	pattern="^[\w]{6,20}" onchange="checkPasswords()" oninvalid="setCustomValidity('密码至少为6位')"  />
+						</td>
+					</tr>
+					<tr>
+						<th><span>确认密码</span></th>
+						<td style="border-bottom: none;">
+							 <input id="upwd_2" data-form="upwd_2" type="password" placeholder="确认密码" 
+                        	 pattern="^[\w]{6,20}" onchange="checkPasswords()" />
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2" style="border-bottom: none;">
+							<input type="submit" name=""  value="确定" class="btns" />
+							<input type="button" name=""  value="取消"  class="btns"/>
+						</td>
+					</tr>
+				</table>
+				</form>
+			</div>
+		</div>
+	</body>
+	<script>
+		
+    /*两次密码验证是否一致*/	
+   	function checkPasswords() {
+        var pwd1 = document.getElementById("upwd");
+        var pwd2 = document.getElementById("upwd_2");
+ 
+        if (pwd1.value != pwd2.value)
+       		pwd2.setCustomValidity("两次输入的密码不匹配");
+        else
+         	pwd2.setCustomValidity("");
+            
+    }
+   	
+   	function checkNull(){
+   		  var pwd1 = document.getElementById("upwd");
+   		  if(pwd1.value==""){
+   		  	pwd1.setCustomValidity("密码不能为空！");
+   		  	return  false;
+   		  }else{
+   		  	return true;
+   		  }
+   	}
+		
+	</script>
+</html>

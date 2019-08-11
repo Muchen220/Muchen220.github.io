@@ -1,0 +1,58 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        span {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<input type="text" id="txtName"><span></span><br>
+<input type="password" id="txtPwd">
+<span></span><br>
+<input type="button" id="btn" value="注册">
+<script src="../AmyjsFunction/myfunction.js"></script>
+<script>
+    var txtname = document.getElementById("txtName");
+    var psd = document.getElementById("txtPwd");
+    txtname.onkeyup = function () {
+        if (txtname.value.length < 3 || txtname.value.length > 6) {
+            this.nextSibling.innerHTML = "名字要在3~6个字符之间";
+        } else {
+            this.nextSibling.innerHTML = "";
+        }
+    }
+    psd.onkeyup = function () {
+        if (psd.value.length < 3 || psd.value.length > 6) {
+            // this.nextSibling.nextSibling.innerHTML = "名字要在3~6个字符之间";
+            //this.nextElementSibling.innerText = "名字要在3~6个字符之间";
+            getnextElement(this).innerHTML = "名字要在3~6个字符之间";
+        } else {
+            //this.nextSibling.nextSibling.innerHTML = "";
+            // this.nextElementSibling.innerText = "";
+            getnextElement(this).innerHTML = "";
+        }
+    }
+
+    //nextElementSibling在ie9以下的版泵都有兼容问题，对其封装解决兼容问题
+
+    function getnextElement(element) {
+        if (element.nextElementSibling) {
+            return element.nextElementSibling;
+        } else {
+            var next = element.nextSibling;
+            while (next && 1 != next.nodeType) {
+                next = next.nextSibling;
+            }
+            return next;
+        }
+    }
+</script>
+</body>
+</html>
+

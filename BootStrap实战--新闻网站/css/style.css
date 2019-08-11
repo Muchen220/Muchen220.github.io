@@ -1,0 +1,149 @@
+
+
+/*导航区*/
+nav div.navbar-header{
+	margin-left: 10px;
+	font-weight: bolder;
+}
+nav ul.nav-ul-style{
+}
+
+nav ul.nav-ul-style li:hover{
+	background-color: gainsboro;
+}
+nav ul.nav-ul-style li a.nav-a-style{
+	margin-left:10px;
+	font-size: 16px;
+}
+
+/*中心区*/
+/*左侧导航栏*/
+section div#nav-area div.list-group-style{
+	padding-top: 15px;
+}
+
+section div.news-list-item img{
+	display: block;
+	width: 100%;
+	min-width: 140px;
+	max-width: 340px;
+	min-height: 120px;
+	max-height:160px;
+	border-radius: 5px;
+}
+
+/*新闻信息区*/
+section div.news-list-item a.news-title{
+	color: black;
+	display: block;/*设置为块级元素*/
+	font-size:1em;
+	font-weight: bolder;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	line-height:1.5;/*设置行高*/
+}
+section div.news-list-item{
+	margin-top:14px;
+}
+section div.news-list-item a.news-title:hover{
+	color: dodgerblue;
+}
+
+section div.news-list-item div.news-info{
+	color: gray;
+	font-size: 14px;
+}
+section div.news-list-item div.news-info span i{
+	color:orangered;
+	margin-right: 5px;
+	font-size: 14px;
+	line-height: 1.5;
+}
+
+/*右侧搜索栏*/
+section div.news-search{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	
+}
+section div.news-search form{
+	width: 100%;
+	
+}
+section div.news-search input.search-input-style{
+	width: 75%;
+	display: inline-block;
+	
+}
+section div.news-search input.search-btn-style{
+	margin-top: -2px;
+}
+/*公告区*/
+section div.search-tel-style{
+	margin-top: 15px;
+	background-color: rgba(0,0,0,0.1);
+	border-radius: 5px;
+}
+section div.search-tel-style span{
+	display: block;
+	min-width: 80px;
+	widows: 100%;
+	height: 80px;
+	text-align: center;
+	font-size: 70px;
+	padding-top: 5px;
+	color: red;
+}
+section div.search-tel-style span i{
+	
+}
+section div.search-tel-style p{
+	font-weight: bolder;
+	text-align: center;
+}
+
+/*热文区域*/
+section div.news-info-area{
+	margin-top: 20px;
+}
+/*热文区域*/
+section div.news-info-area h3{
+	font-weight: bolder;
+	text-align: center;
+}
+section div.news-info-area div.list-group{
+	border: 1px solid gainsboro;
+	border-radius: 5px;
+}
+section div.news-info-area div.news-item-style{
+	border: none;
+}
+section div.news-info-area div.news-item-style a{
+	color: black;
+}
+section div.news-info-area div.news-item-style a:hover{
+	color:blue;
+	
+}
+section div.news-info-area div.news-item-style a i{
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+section div.news-info-area div.news-item-style:nth-child(2n){
+	background-color:rgba(0,0,0,0.1);
+}
+section div.news-info-area div.news-item-style:hover{
+	background-color:lavender;
+}
+
+/*底部*/
+footer{
+	margin-top: 20px;
+	width: 100%;
+	text-align: center;
+	background-color: gainsboro;
+}
+footer p{
+	margin-top: 10px;
+}

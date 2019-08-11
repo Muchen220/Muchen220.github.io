@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+	
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <div>
+        <div class="be-content pren">
+
+            <div class="ioc_text">
+                <img src="img/logo.png" alt="">
+                <span>请登录您的用户</span>
+            </div>
+
+            <div>
+                <form action="bgo_index.html" method="get" onsubmit="return check()" >
+                    <div class="br-content">
+
+                         <div class="input-group mb-4 bootint">
+                             <div class="input-group-prepend">
+                                 <span class="input-group-text"><i class="fa fa-user"></i></span>
+                             </div>
+                             <input type="text" class="form-control" placeholder="用户名" id="uname">
+                         </div>
+
+                         <div class="input-group mb-4 bootint">
+                             <div class="input-group-prepend">
+                                 <span class="input-group-text"><i class="fa fa-unlock-alt"></i></span>
+                             </div>
+                             <input type="password" class="form-control" placeholder="密码" id="upwd">
+                             
+                        		
+                        	
+                         </div>
+						<span id="message" style="display:block;margin-top: -15px;margin-left:25px;color: red;"></span>
+                        <div class="br-text">
+                        	
+                            <p>
+                                <span>忘记密码?</span>
+                                <a href="">找回</a>
+                            </p>
+                        </div>
+                        <div style="padding-top: 10px">
+                            <input type="submit" class="btn" value="登录">
+                        </div>
+                        <div class="be-con">
+                            <span>Copyright © 2018 - 2019 <a href="login.html">前台登陆</a></span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+    	// 判断输入的用户和密码是否为空
+    	function check(){
+    		var uname =document.getElementById("uname").value;
+    		var upwd =document.getElementById("upwd").value;
+    		if(uname=="" || upwd==""){
+    			$("#message").text("账号或密码不能为空！");
+    			return false;
+    		}
+    		return true;
+    	}
+    
+    </script>
+</body>
+	
+</html>

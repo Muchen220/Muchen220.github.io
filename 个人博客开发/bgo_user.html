@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="res/css/amazeui.min.css" />
+		<link rel="stylesheet" href="res/css/admin.css" />
+		<link rel="stylesheet" href="css/about_me.css" />
+	</head>
+	<style type="text/css">
+		#editor a:nth-child(1){
+			color:dodgerblue;
+			background-color: ghostwhite;
+		}
+		#editor a:nth-child(1):hover{
+			color:black;
+			background-color: gainsboro;
+		}
+		#editor a:nth-child(2){
+			color:red;
+			background-color: ghostwhite;
+		}
+		#editor a:nth-child(2):hover{
+			color:black;
+			background-color: gainsboro;
+		}
+	</style>
+	<script>
+		function show(){
+			var box =document.getElementById("show");
+			var over=document.getElementById("over");
+			box.style.display="block";
+			over.style.display="block";
+		}
+		function hide(){
+			var box =document.getElementById("show");
+			var over=document.getElementById("over");
+			box.style.display="none";
+			over.style.display="none";
+		}
+		
+		
+	</script>
+	<body style="min-width: 1200px;">
+		<div class="admin-content-body">
+			<div class="am-cf am-padding am-padding-bottom-0">
+				<div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">用户管理</strong><small></small></div>
+			</div>
+
+			<hr>
+
+			<div class="am-g">
+				<div class="am-u-sm-12 am-u-md-6">
+					<div class="am-btn-toolbar">
+						<div class="am-btn-group am-btn-group-xs">
+							<button type="button" class="am-btn am-btn-default" onclick="javascript:show()">
+								<span class="am-icon-plus"></span> 新增</button>
+						</div>
+					</div>
+				</div>
+				<div class="am-u-sm-12 am-u-md-3">
+
+				</div>
+				<div class="am-u-sm-12 am-u-md-3" style="margin-right: 30px;">
+					<div class="am-input-group am-input-group-sm">
+						<input type="text" class="am-form-field">
+						<span class="am-input-group-btn">
+            <button class="am-btn am-btn-default" type="button">搜索</button>
+          </span>
+					</div>
+				</div>
+			</div>
+			<div class="am-g">
+				<div class="am-u-sm-12">
+					<form class="am-form">
+						<table class="am-table am-table-striped am-table-hover table-main">
+							<thead>
+								<tr>
+									<th class="table-check"><input type="checkbox"></th>
+									<th class="table-id">ID</th>
+									<th class="table-title">昵称</th>
+									<th class="table-type">用户名</th>
+									<th  class="table-type"style="width: 200px;">角色管理</th>
+									<th class="table-set" >操作</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><input type="checkbox"></td>
+									<td>1</td>
+									<td>
+										<a href="#">张三</a>
+									</td>
+									<td>admin</td>
+									<td >
+										<select style="width: 120px;height: 30px;font-size: 12px;">
+											<option value="1">普通用户</option>
+											<option value="2">超级管理员</option>
+										</select>
+									</td>
+									<td>
+										<div class="am-btn-toolbar">
+											<div class="am-btn-group am-btn-group-xs" id="editor">
+												<a class="am-btn am-btn-default am-btn-xs am-text-secondary"  >
+													<span class="am-icon-pencil-square-o"></span >编辑</a>
+												<a href="bgo_news.html" class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only" 
+													onclick="return deleteUser()">
+													<span class="am-icon-trash-o"></span> 删除</a>
+											</div>
+										</div>
+									</td>
+								</tr>
+								
+								
+								<tr>
+									<td><input type="checkbox"></td>
+									<td>1</td>
+									<td>
+										<a href="#">张三</a>
+									</td>
+									<td>admin</td>
+									<td >
+										<select style="width: 120px;height: 30px;font-size: 12px;">
+											<option value="1">普通用户</option>
+											<option value="2">超级管理员</option>
+										</select>
+									</td>
+									<td>
+										<div >
+											<div class="am-btn-group am-btn-group-xs">
+												<button class="am-btn am-btn-default am-btn-xs am-text-secondary" >
+													<span class="am-icon-pencil-square-o"></span >编辑</button>
+												<button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 删除</button>
+											</div>
+										</div>
+									</td>
+								</tr>
+								
+								
+								<tr>
+									<td><input type="checkbox"></td>
+									<td>1</td>
+									<td>
+										<a href="#">张三</a>
+									</td>
+									<td>admin</td>
+									<td >
+										<select style="width: 120px;height: 30px;font-size: 12px;">
+											<option value="1">普通用户</option>
+											<option value="2">超级管理员</option>
+										</select>
+									</td>
+									<td>
+										<div >
+											<div class="am-btn-group am-btn-group-xs">
+												<button class="am-btn am-btn-default am-btn-xs am-text-secondary" >
+													<span class="am-icon-pencil-square-o"></span >编辑</button>
+												<button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 删除</button>
+											</div>
+										</div>
+									</td>
+								</tr>
+							
+							</tbody>
+						</table>
+						<div class="am-cf">
+							共 15 条记录
+							<div class="am-fr" style="margin-right: 35%;">
+								<ul class="am-pagination">
+									<li class="am-disabled">
+										<a href="#">«</a>
+									</li>
+									<li class="am-active">
+										<a href="#">1</a>
+									</li>
+									<li>
+										<a href="#">2</a>
+									</li>
+									<li>
+										<a href="#">3</a>
+									</li>
+									<li>
+										<a href="#">4</a>
+									</li>
+									<li>
+										<a href="#">5</a>
+									</li>
+									<li>
+										<a href="#">»</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<hr>
+					</form>
+				</div>
+			</div>
+		</div>
+		
+		<div id="show"  style="width: 800px;border-radius: 5px;">
+			<div class="edit_info" style="border-radius: 5px;" >
+				<form action="" method="post">
+					<a href="javascript:hide()">关闭</a>
+					<h4><strong>新增用户</strong></h4>
+					<ul style="margin-top: -30px;">
+						<li>
+							<label><strong>昵称:</strong></label>
+							<input type="text" name="" id="" value=""/>
+						</li>
+						<li>
+							<label><strong>用户名:</strong></label>
+							<input type="text" name="" id="" value=""  />
+						</li>
+						<li>
+							<label id="lable3"><strong>密码:</strong></label>
+							<input type="password" name="" id="" value=""  />
+						</li>
+						<li>
+							<label id="lable3"><strong>权限分配:</strong></label>
+							<select style="margin-left: 10px;">
+								<option value="1">普通用户</option>
+								<option value="2">超级管理员</option>
+							</select>
+						</li>
+						<li id="li_4">
+							<input type="submit" value="确定" class="btn"/>
+							<input type="button" value="取消"  class="btn"/>
+						</li>
+					</ul>
+				</form>
+			</div>
+		</div>
+		<div id="over" style="background-color:white;opacity: 0.5;">
+			
+		</div>
+		
+	</body>
+	<script>
+		function deleteUser(){
+			if(confirm("是否要删除该用户？")==true){
+				alert("删除客户成功！");
+				 return true;
+			}else{
+				alert("删除客户失败！");
+				return false;
+			}
+		}
+		
+	</script>
+</html>

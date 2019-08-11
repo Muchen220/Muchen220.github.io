@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>账户管理</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/about_me.css" />
+	</head>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		body{
+			width: 100%;
+			min-width: 300px;
+			background-color: beige;
+		}
+		
+	</style>
+	<body>
+		<div class="manage_nav">
+			<a class="re_home" href="main.html"  target="_top">
+				返回主页
+			</a>
+			<div class="user_img">
+				<img src="img/blogs_01.png" />
+				<a href="javascript:imgshow()">更换头像</a>
+			</div>
+			<h3>admin</h3>
+			
+			<div class="user_nav">
+				<h4 align="left"><strong>账户管理</strong></h4>
+				<hr  style="width: 90%; margin: 5px auto;border: 1px solid gainsboro;"  />
+				<ul>
+					<li>
+						<a href="#">管理博客<i class="glyphicon glyphicon-chevron-right"></i></a>
+					</li>
+					<li>
+						<a href="about_info.html" target="frame_info">个人信息
+							<i class="glyphicon glyphicon-chevron-right"></i>
+						</a>
+					</li>
+					<li>
+						<a href="about_pwd.html" target="frame_info">修改密码
+							<i class="glyphicon glyphicon-chevron-right"></i>
+						</a>
+					</li>
+					<li></li>
+					<li></li>
+					<li></li>
+					
+				</ul>
+			</div>
+		</div>
+		<div id="imgshow">
+			<form action="" method="post" enctype="multipart/form-data">
+				<a href="javascript:imgclose()">关闭</a>
+				<h4><strong>上传图片</strong></h4>
+				
+				<input type="file"  name="uimg" required="required"  id="picture" />
+				<button type="submit">确定</button>
+			</form>
+		</div>
+	</body>
+	<script>
+		function imgshow(){
+			var imgshow=document.getElementById("imgshow");
+			imgshow.style.display="block";
+		}
+		function imgclose(){
+			var imgshow=document.getElementById("imgshow");
+			imgshow.style.display="none";
+		}
+	</script>
+</html>

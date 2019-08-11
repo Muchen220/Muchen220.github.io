@@ -1,0 +1,362 @@
+
+
+/*about_me one page css*/
+.manage_nav{
+			width: 90%;
+			border: 1px solid gainsboro;
+			border-radius: 5px;
+			margin-top: 20px;
+			margin-left: 20px;
+			text-align: center;
+			background-color: rgba(238,238,224,0.1);
+			
+		}
+		.manage_nav .user_img{
+			width: 120px;
+			height: 120px;
+			border-radius: 50%;
+			border: 3px solid gainsboro;
+			position: relative;
+			overflow: hidden;
+			margin: 40px auto;
+		}
+		.manage_nav .user_img img{
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+			z-index: 20;
+		}
+		
+		.manage_nav .user_img a{
+			display: block;
+			height: 42px;
+			color: white;
+			font-size: 16px;
+			line-height: 42px;
+			text-align: center;
+			background-color:rgba(0,0,0,0.5);
+		}
+		.manage_nav .user_img:hover a{
+			transition: all 0.5s;
+			margin-top: -40px;
+			width: 100%;
+			position: absolute;
+			
+		}
+		
+		.re_home{
+			display: block;
+			width: 80px;
+			height: 30px;
+			border: 1px solid gainsboro;
+			position: absolute;
+			line-height: 30px;
+			border-radius:50px 20px;
+			background-color: orangered;
+			color: white;	
+		}
+		.re_home:hover{
+			color:white;
+		}
+		
+		.manage_nav  h3{
+			/*border: 1px solid;*/
+			margin-top: -20px;
+		}
+		.user_nav{
+			/*border: 1px solid;*/
+		}
+		.user_nav h4{
+			margin-top: 30px;
+			/*border-bottom: 2px solid  gainsboro;*/
+			padding-left: 20px;
+		}
+		.user_nav ul{
+			/*border: 1px solid red;*/
+			margin-top: 5px;
+			
+		}
+		.user_nav ul li{
+			height: 50px;
+			line-height: 50px;
+			list-style: none;
+			/*border: 1px solid;*/
+			text-align: left;
+			text-indent: 35px;
+		}
+		.user_nav ul li a{
+			display: block;
+			/*border: 1px solid;*/
+			font-size: 14px;
+			text-decoration: none;
+			color: black;
+			
+		}
+		.user_nav ul li a:hover{
+			color: orangered;
+			background-color: gainsboro;
+			
+		}
+		.user_nav ul li a i{
+			margin-left: 120px;
+		}
+		
+		
+		#imgshow{
+			width: 240px;
+			height: 130px;
+			position: absolute;
+			top: 150px;
+			margin-left: 10%;
+			border: 2px solid gainsboro;
+			border-radius: 5px;
+			background-color:whitesmoke;
+			opacity: 0.9;
+			display: none;
+		}
+		#imgshow form{
+			/*border: 1px solid;*/
+			
+		}
+	    #imgshow form a{
+	    	display: block;
+	    	margin-top: 5px;
+	    	width: 50px;
+	    	font-size: 14px;
+	    	text-align: center;
+	    	margin-left: 80%;
+	    	color: gray;
+	    }
+	    #imgshow form a:hover{
+	    	color: red;
+	    }
+	    #imgshow form h4{
+	    	width: 100px;
+	    	/*border: 1px solid;*/
+	    	margin:-5px auto;
+	    }
+		#imgshow form input{
+			width: 180px;
+			height: 35px;
+			border: 1px solid gainsboro;
+			border-radius: 2px;
+			margin: 10px auto;
+		}
+		#imgshow form button{
+			display: block;
+			margin: 0 auto;
+			width: 100px;
+			height: 30px;
+			
+		}
+/* ablout_info page css */
+
+.about_info{
+			width: 98%;
+			margin: 0 auto;
+			height: 584px;
+			border: 1px solid gainsboro;
+			border-radius: 5px;
+		}
+		.about_nav{
+			margin-top: 20px;
+			height: 40px;
+			/*border: 1px solid;*/
+			position: relative;
+		}
+		.about_nav p {
+			display: inline;
+			font-size: 18px;
+			line-height: 40px;
+		   /* border: 1px solid;*/
+		    margin-left: 20px;
+		}
+		.about_nav p:nth-child(2){
+			position: absolute;
+			right: 0px;
+			margin-right: 100px;
+		}
+		.about_nav p i{
+			color: blue;
+		}
+		.about_nav p a{
+			color: gray;
+			margin-left: 5px;
+		}
+		.about_nav p a:hover{
+			color: dodgerblue;
+		}
+		.user_manage{
+			width: 80%;
+			margin: 35px auto;
+		}
+		.user_manage table{
+			width: 100%;
+			list-style: none;
+			
+		}
+		.user_manage table tr{
+			height: 72px;
+			/*border: 1px solid;*/
+		}
+		.user_manage table th{
+			width: 15%;
+			text-align: center;
+			
+		}
+		.user_manage table th span{
+			display: block;
+			width: 90%;
+			height: 60px;
+			line-height: 60px;
+			font-size: 16px;
+			border: 1px solid gainsboro;
+			border-radius: 2px;
+			background-color: lightgray;
+			
+			
+		}
+		.user_manage table td{
+			text-indent: 20px;
+			border-bottom: 1px solid gainsboro;
+		}
+
+
+
+/*about_pwd page css*/
+#show{
+			display: none;
+			width: 70%;
+			height: 634px;
+			/*display: none;*/
+			position: absolute;
+			top: 13%;
+			left: 12%;
+			z-index: 2;
+			/*border: 1px solid red;*/
+		}
+#over{
+	display: none;
+	width: 100%;
+	height: 100%;
+	opacity: 0.6;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	background-color:cornsilk;
+	opacity: 0.4;
+	
+}
+
+
+.box{
+			width: 98%;
+			margin: 0 auto;
+			height: 584px;
+			border: 1px solid gainsboro;
+			border-radius: 5px;
+		}	
+
+.edit_info{
+			width: 70%;
+			height: 380px;
+			border: 2px solid gray;
+			margin: 0 auto;
+			border-radius: 10px;
+			background-color:ghostwhite;
+		}
+		.edit_info a{
+			font-size: 16px;
+			color: black;
+			/*border: 1px solid;*/
+			padding: 5px;
+			position: absolute;
+			right: 130px;
+			top: 0px;
+			
+		}
+		.edit_info a:hover{
+			color: red;
+		}
+		.edit_info h4{
+			text-indent: 30px;
+			margin-top: 40px;
+		}
+		.edit_info li{
+			height: 40px;
+			list-style: none;
+			margin-top: 25px;
+			/*border: 1px solid gainsboro;*/
+		}
+		.edit_info li label{
+			text-align: right;
+			font-size: 16px;
+		    line-height: 40px;
+		    width: 160px;
+		  /*  border: 1px solid;*/
+		}
+		.edit_info li input{
+			margin-left: 10px;
+			height: 35px;
+			width: 280px;
+			border: 1px solid gainsboro;
+			border-radius: 5px;
+			text-indent: 10px;
+		}
+		.edit_info #li_3 {
+			height: 60px;
+		}
+		.edit_info #li_3 #lable3{
+			line-height: 50px;
+			/*border: 1px solid;*/
+			float: left;
+		}
+		.edit_info #li_3 textarea{
+			resize: none;
+			width: 280px;
+			height: 60px;
+			margin-left: 14px;
+			border: 1px solid gainsboro;
+			border-radius: 5px;
+			text-indent: 10px;
+			margin-top: -20px;
+			float: left;
+			
+		}
+		.edit_info #li_4{
+			text-align: center;
+		}
+		.edit_info #li_4 .btn{
+			width: 100px;
+			background-color:dodgerblue;
+			color: white;
+			margin-left: 15px;
+			padding: 0;
+		}
+		.edit_info #li_4 .btn:nth-child(2){
+			background-color: gainsboro;
+		}
+		
+/*  update password page CSS */
+.user_manage td{
+			border: none;
+		}
+		.user_manage input{
+			width: 40%;
+			height: 58px;
+			border: 1px solid gainsboro;
+			border-radius: 5px;
+			text-indent: 10px;	
+		}
+		.user_manage td .btns{
+			margin-top: 20px;
+			width: 140px;
+			height: 58px;
+			margin-left: 30px;
+			font-size: 16px;
+		}
+		.user_manage td .btns:nth-child(1){
+			margin-left: 148px;
+			background-color: deepskyblue;
+		}

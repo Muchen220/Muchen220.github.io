@@ -1,0 +1,117 @@
+*{
+			padding: 0;
+			margin: 0;
+		}
+		body{
+			width: 300px;
+			background-color: beige;
+			margin-left: 30px;
+		}
+		
+		
+		/*右侧导航*/
+		.aside_nav{
+			margin-top: -10px;
+			width: 100%;
+			height: 180px;
+			/*border: 1px solid;*/
+			
+		}
+		.aside_nav ul{
+			margin-left: 5px;
+			width:282px ;
+		}
+		.aside_nav li{
+			list-style: none;
+			width: 90px;
+			height: 75px;
+			border: 1px solid;
+			float: left;
+			text-align: center;
+			line-height: 70px;
+			margin-left: 4px;
+			margin-top: 4px;
+		}
+		
+		.aside_nav li:nth-child(1){
+			background-color: #FAEBD7;
+			
+		}
+		.aside_nav li:nth-child(2){
+			background-color: lightpink;
+		}
+		.aside_nav li:nth-child(3){
+			background-color: lightsalmon;
+		}
+		.aside_nav li:nth-child(4){
+			background-color: lightgreen;
+		}
+		.aside_nav li:nth-child(5){
+			background-color: plum;
+		}
+		.aside_nav li:nth-child(6){
+			background-color: lightskyblue;
+		}
+		
+		.aside_nav li a{
+			font-size: 14px;
+			font-weight: 500;
+			color: black;
+			transform: rotateZ(0deg); /*设置旋转    平面的沿着Z轴进行旋转*/
+		}
+		.aside_nav li:hover span{
+			transition: all 1.5s; 
+			transform: rotateZ(360deg);
+			
+		}
+		.aside_nav li span{
+			display: block;
+		}
+		
+		.new_articleNav{
+			width: 100%;
+		}
+		.new_articleNav h4{
+			width: 90%;
+			margin-left: 10px;
+			margin-top: 25px;
+			height: 30px;
+			border-bottom: 1px solid gray;
+		}
+		/*文字轮播*/
+		#scrollBox{
+			height:180px;
+			width:268px;
+			overflow:hidden;
+			margin-left: 5px;
+			border: 2px dashed gray;
+		}
+		#scrollBox #con1,#con2{
+			width:280px;
+			float:left;
+		}
+		
+		#scrollBox li{
+			list-style:none;
+			height:20px;
+			margin: 0;
+			padding: 0;
+			text-indent: 15px;
+		}	
+		#scrollBox li a{
+			color: black;
+			font-size: 16px;
+			
+		}
+		#scrollBox li a:hover{
+			color: orangered;
+		}
+		.new_link {
+			width: 268px;
+			margin-left: 10px;
+			border: 1px solid;
+		}
+		.new_link	li{
+			padding-left:2px;
+			list-style: none;
+		}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>用户注册</title>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/register.css"/>
+
+</head>
+<body>
+    <div id="main">
+        <div id="header">
+        </div>
+        <div class="container">
+            <div class="bgPic"><img src="img/register/register_bg1.jpg" alt=""/></div>
+            <div class="register">
+                <div class="title">
+                    <span>注册</span>
+                    <a href="login.html">去登录</a>
+                </div>
+                <form autocomplete="off" action="#" method="get">
+                    <div class="default">
+                    	<input id="uname" name="uname" data-form="uname" type="text" placeholder="用户名  " pattern="[\w]{4,10}$"
+                    	 oninvalid="setCustomValidity('请输入4-10位数字和字符的用户名')" />
+     
+                    </div>
+                    <div class="default">
+                        <p>密码由6~10个数字和英文字符组成</p>
+                        <input id="upwd" name="upwd" data-form="upwd" type="password" placeholder="请输入密码" min="6"
+                        	pattern="^[\w]{6,20}" onchange="checkPasswords()" oninvalid="setCustomValidity('密码至少为6位')"  />
+                      
+                    </div>
+                    <div class="default">
+                        <p>请确认两次输入密码一致</p>
+                        <input id="upwd_2" data-form="upwd_2" type="password" placeholder="确认密码" 
+                        pattern="^[\w]{6,20}" onchange="checkPasswords()" />
+                      
+                    </div>
+                
+                    <div class="default">
+                        <p>请输入验证码</p>
+                        <input id="captcha" name="captcha" data-form="captcha" type="text" placeholder="验证码" pattern="[\w]{4}$" maxlength="4"
+                         style="width: 140px;"/>
+                      	<img src="img/blogs_01.png"  id="codeImg" alt="点击更换" title="点击更换"
+                      		style="border: 1px solid;width: 100px;height: 30px;margin-left: 10px;border-radius: 2px;"
+                      		onclick="" />
+                    </div>
+                    <div class="submit">
+                        <span class="notice">点击"注册"代表您同意遵守
+                            <a href="#">用户协议</a>
+                            和
+                            <a href="#">隐私条款</a>
+                        </span>
+                        <button class="s_hover" data-form="submit">注册</button>
+                    </div>
+                </form>
+                
+            </div>
+        </div>
+        <div id="footer">
+        </div>
+    </div>
+    <script>
+    function checkName(){
+    	var name=document.getElementById("uname");
+    	alert(name.value);
+    	if(name.value==""){
+    		name.setCustomValidity("用户名不能为空");
+    	}else{
+    		name.setCustomValidity("");
+    	}
+    }
+   
+    
+    /*两次密码验证是否一致*/	
+   	function checkPasswords() {
+        var pwd1 = document.getElementById("upwd");
+        var pwd2 = document.getElementById("upwd_2");
+ 
+        if (pwd1.value != pwd2.value)
+       		pwd2.setCustomValidity("两次输入的密码不匹配");
+        else
+         	pwd2.setCustomValidity("");
+            
+    }
+    
+    //验证码的js代码
+   $(document).ready(function() {
+            changeCode();
+            $("#codeImg").bind("click", changeCode);
+        });function genTimestamp() {
+            var time = new Date();
+            return time.getTime();
+        }
+
+        function changeCode() {
+            $("#codeImg").attr("src", "code.do?t=" + genTimestamp());
+        }
+    	
+    </script>
+</body>
+</html>

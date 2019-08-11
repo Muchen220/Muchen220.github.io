@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>右边信息区</title>
+		<link rel="stylesheet" type="text/css" href="css/blog_right.css"/>
+		<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+	</head>
+	<style type="text/css">
+		
+	</style>
+	<body style="background-color: beige;">
+		<aside>
+			<div class="aside_nav">
+				<ul>
+					<li>
+						<span>
+							<i class="glyphicon glyphicon-home" style="color: firebrick;"></i>
+							<a href="blog_left.html" target="iframe_left">网站主页</a>
+						</span>
+					</li>
+					<li>
+						<span>
+							<i class="glyphicon glyphicon-pencil" style="color: cornflowerblue;"></i>
+							<a href="#">心情随笔</a>
+						</span>
+					</li>
+					<li>
+						<span>
+							<i class="glyphicon glyphicon-cloud" style="color: cornflowerblue;"></i>
+							<a href="blogs_two.html" target="iframe_left">韶华追忆</a>
+						</span>
+					</li>
+					<li>
+						<span>
+							<i class="glyphicon glyphicon-user" style="color: cornflowerblue;"></i>
+							<a href="#">关于博主</a>
+						</span>
+					</li>
+					<li>
+						<span>
+							<i class="glyphicon glyphicon-edit" style="color: cornflowerblue;"></i>
+							<a href="#">blog留言</a>
+						</span>
+					</li>
+					<li>
+						<span>
+							<i class="glyphicon glyphicon-book" style="color: cornflowerblue;"></i>
+							<a href="#">叶子书屋</a>
+						</span>
+					</li>
+				</ul>
+			</div>
+			
+			<!--最新文章显示栏-->
+			<div class="new_articleNav">
+				<h4>最新文章</h4>
+				<div id="scrollBox">
+			        <ul id="con1">
+			            <li><a href="#" target="_blank">《孩子你慢慢来》书评</a><li>
+			            <li><a href="#" target="_blank">《活着》书评</a><li>
+			            <li><a href="#" target="_blank">2018上半年，琐碎心情</a><li>
+			            <li><a href="#" target="_blank">本地环境搭建php7</a><li>
+			            <li><a href="#" target="_blank">记录心情-好好生活</a><li>
+			            <li><a href="#" target="_blank">XunSearch(迅搜)</a><li>
+			          </ul>
+			       	 <ul id="con2"></ul>
+			       </div>
+				<h4 >友情链接</h4>
+				<ul class="new_link" >
+					<li><a href="#">zhjx922博客</a></li>
+					<li><a href="#">PHP学习网</a></li>
+					<li><a href="#">KTWO博客</a></li>
+					<li><a href="#">80乐</a></li>
+					<li><a href="#">Leftso(左搜)</a></li>
+					<li><a href="#">慕课网</a></li>
+				</ul>
+			</div>
+			
+		</aside>
+	</body>
+	<script>
+		/*文字轮播*/
+		 window.onload=function(){
+	               	var area =document.getElementById('scrollBox');
+	                var con1 = document.getElementById('con1');
+	                var con2 = document.getElementById('con2');
+	                con2.innerHTML=con1.innerHTML;
+	                function scrollUp(){
+	                if(area.scrollTop>=con1.offsetHeight){
+	                    area.scrollTop=0;
+	                }else{
+	                    area.scrollTop++
+	                }
+	                }                
+	                var time = 50;
+	                var mytimer=setInterval(scrollUp,time);
+	                area.onmouseover=function(){
+	                    clearInterval(mytimer);
+	                }
+	                area.onmouseout=function(){
+	                    mytimer=setInterval(scrollUp,time);
+	                }
+               }
+		
+	</script>
+</html>

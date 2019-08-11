@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>个人博客开发主页</title>
+		<link rel="stylesheet" href="css/header.css" />
+		<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	</head>
+	<style>
+		
+	</style>
+	<body style="background-color: beige;"onload="startTime()">
+	<header>
+		<div class="blog_top">
+			<div class="tapnav">
+				&nbsp;&nbsp;&nbsp;&nbsp;
+				您好！当前时间：<font color="black"><span id="nowDateTimeSpan"></span></font>
+			</div>
+			<div class="tapnav">
+				<marquee onmouseover=this.stop() onmouseout=this.start()>
+					<i class="glyphicon glyphicon-volume-up"></i>
+					公告：
+				</marquee>
+			</div>
+			<div class="tapnav">
+				<a href="#">Home</a>
+				<a href="#">关于我们</a>
+				<a href="login.html" class="glyphicon glyphicon-share" target="_top">退出登录</a>
+				<a href="about.html"  target="_top" class="glyphicon glyphicon-cog">个人中心</a>
+			</div>
+		</div>
+			<div class="search">
+				<div class="search_nav">
+					<ul>
+						<a href="blog_left.html" target="iframe_left">首页</a>
+						<a href="blogs_two.html" target="iframe_left">心情随笔</a>
+						<a href="blogs_three.html" target="iframe_left">博客日记</a>
+						<a href="#">心情随笔</a>
+						<a href="write_blog.html" target="iframe_left">博文发布</a>
+						<a href="#">关于我</a>
+					</ul>
+					<div class="search_text">
+						<input type="button" class="btn"   id="searchTxt"/>
+						<input type="text" placeholder="  搜索..." name="searchText"/>
+					</div>
+				</div>
+			</div>
+		</header>
+		
+	</body>
+	
+		<script language="JavaScript">
+			function startTime()   
+			{   
+				var today=new Date();//定义日期对象   
+				var yyyy = today.getFullYear();//通过日期对象的getFullYear()方法返回年    
+				var MM = today.getMonth()+1;//通过日期对象的getMonth()方法返回年    
+				var dd = today.getDate();//通过日期对象的getDate()方法返回年     
+				var hh=today.getHours();//通过日期对象的getHours方法返回小时   
+				var mm=today.getMinutes();//通过日期对象的getMinutes方法返回分钟   
+				var ss=today.getSeconds();//通过日期对象的getSeconds方法返回秒   
+				// 如果分钟或小时的值小于10，则在其值前加0，比如如果时间是下午3点20分9秒的话，则显示15：20：09   
+				MM=checkTime(MM);
+				dd=checkTime(dd);
+				mm=checkTime(mm);   
+				ss=checkTime(ss);    
+				var day; //用于保存星期（getDay()方法得到星期编号）
+				if(today.getDay()==0)   day   =   "星期日 " 
+				if(today.getDay()==1)   day   =   "星期一 " 
+				if(today.getDay()==2)   day   =   "星期二 " 
+				if(today.getDay()==3)   day   =   "星期三 " 
+				if(today.getDay()==4)   day   =   "星期四 " 
+				if(today.getDay()==5)   day   =   "星期五 " 
+				if(today.getDay()==6)   day   =   "星期六 " 
+				document.getElementById('nowDateTimeSpan').innerHTML=yyyy+"-"+MM +"-"+ dd +" " + hh+":"+mm+":"+ss+"   " + day;   
+				setTimeout('startTime()',1000);//每一秒中重新加载startTime()方法 
+			}   
+			
+			function checkTime(i)   
+			{   
+				if (i<10){
+					i="0" + i;
+				}   
+				  return i;
+			}  
+		</script>
+</html>
