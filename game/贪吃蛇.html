@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="UTF-8"/>
+  <meta name="keywords" content="关键字" />
+  <meta name="description" content="描述" />
+   <title>贪吃蛇</title>
+	<style type="text/css">
+		*{margin:0;padding:0;}
+		body{
+		background-image:url(2.jpg);
+		}
+		.nav{
+			width:160px;
+			border:1px solid white;
+			margin:0 auto;
+		}
+		.nav ul{
+			margin:0 auto;
+			display:black;
+			list-style-type:none;
+		}
+		.nav ul li{
+			float:left;
+			padding:10px;
+			font-size:18px;
+			font-weight:bolder;
+			
+		}
+		.nav ul li a{
+			color:black;
+		}
+		.nav ul li a:hover{
+			color:red;
+			font-size:18px;
+			font-weight:bolder;
+		}
+		#canvas{
+			position:relative;
+			background:#f2f2f2;
+			display:block;
+			margin:10px auto;
+			top:-40px;
+			border:8px solid #b5b5b5;
+		}
+		#a{
+			margin:60px auto;
+			width:200px;
+			height:auto;
+		}
+		#a h1{
+			font-family:"华文行楷";
+			color:red;
+			font-size:60px;
+		}
+		#begame{
+			position:absolute;
+			top:785px;
+			left:920px;
+			width:100px;
+			height:40px;
+			color:red;
+			font-size:20px;
+			background:#f0fcbf;
+			font-family:"华文行楷";
+			border-radius:10px;
+			line-height:40px;
+		}
+		h4{
+			position:absolute;
+			top:850px;
+			left:900px;
+		}
+	</style>
+ </head>
+ <body>
+	  <!--<input id="begame" type="button" value="开始游戏" onclick="begin()">-->
+	  <div class="nav">
+			<ul>
+				<li><a href="贪吃蛇.html">贪吃蛇</a></li>
+				<li><a href="五子棋.html">五子棋</a></li>
+			</ul>
+	   </div>
+	  <div id="a"><h1>贪吃蛇</h1></div>
+	  <canvas id="canvas" width="600px" height="600px"></canvas>
+
+  <script type="text/javascript">
+	//获取画板
+	var ctx = document.getElementById("canvas");
+	//获取画板权限
+	var ctx = ctx.getContext("2d");
+	//初始化蛇的长度
+	var snakeCount = 6;
+	//定义一条蛇
+	var snake = [];
+	var foodX = 0;
+	var foodY = 0;
+	var toGo = 3;
+	//画格子
+	function drawRect(){
+		for(var i=0;i<30;i++){
+			
+			ctx.stokeStyle = "red";
+			ctx.beginPath();
+			ctx.moveTo(i*20,0);//起点
+			ctx.lineTo(i*20,600);//终点
+			ctx.moveTo(0,i*20);//起点
+			ctx.lineTo(600,i*20);//终点
+			ctx.closePath();
+			ctx.stroke();//连线
+		}
+		//画蛇
+		for(var i=0;i<snakeCount;i++){
+			//蛇的颜色
+			ctx.fillStyle = "#60e3a5";
+			//设定蛇头颜色
+			if(i==snakeCount-1){
+				ctx.fillStyle = "#ff0033";
+			}
+			//绘制蛇身体
+			ctx.fillRect(snake[i].x,snake[i].y,20,20);
+		}
+		//绘制食物
+		ctx.fillStyle = "#330000";
+		ctx.fillRect(foodX,foodY,20,20);
+		ctx.fill();
+	}
+		//定义蛇的坐标
+		function start(){
+			//遍历蛇的长度
+			for(var i=0;i<snakeCount;i++){
+			snake[i] = {x:i*20,y:0}
+			}
+		addFood();
+		drawRect();	
+		}
+	//添加食物
+	function addFood(){
+		foodX = Math.floor(Math.random()*30)*20;
+		foodY = Math.floor(Math.random()*30)*20;
+		for(var i=0;i<snakeCount-1;i++){
+			if(foodX == snake[i].x&&foodY == snake[i].y){
+				addFood();
+			}
+		}
+	}
+	//蛇的移动方向
+	function move(){
+		switch(toGo){
+			case 1:snake.push({x:snake[snakeCount-1].x-20,y:snake[snakeCount-1].y});//向左
+				break;
+			case 2:snake.push({x:snake[snakeCount-1].x,y:snake[snakeCount-1].y-20});//向上
+				break;
+			case 3:snake.push({x:snake[snakeCount-1].x+20,y:snake[snakeCount-1].y});//向右
+				break;
+			case 4:snake.push({x:snake[snakeCount-1].x,y:snake[snakeCount-1].y+20});//向下
+				break;
+			case 5:snake.push({x:snake[snakeCount-1].x+20,y:snake[snakeCount-1].y+20});//向右下斜着跑
+				break;
+			case 6:snake.push({x:snake[snakeCount-1].x+20,y:snake[snakeCount-1].y-20});//向左上斜着跑
+				break;
+		}
+		//删除第一个元素
+		snake.shift();
+		//重新绘制
+		ctx.clearRect(0,0,600,600);
+		isDead();
+		isEat();
+		drawRect();
+	}
+	function keyDown(e){
+		switch(e.keyCode){
+			case 37:toGo = 1;
+				break;
+			case 38:toGo = 2;
+				break;
+			case 39:toGo = 3;
+				break;
+			case 40:toGo = 4;
+				break;
+			case 81:toGo = 5;
+				break;
+			case 87:toGo = 6;
+				break;
+		}
+	}
+	function btnstart(){
+		//蛇移动的速度
+		setInterval(move,50);
+		//监听键盘事件
+		document.onkeydown = function(e){
+		var e = e||window.event;
+		//console.log(e.keyCode);
+		keyDown(e);
+		}
+	}
+	//定义游戏规则
+	function isDead(){
+		//判断边界
+		if(snake[snakeCount-1].x>600||snake[snakeCount-1].y>600||snake[snakeCount-1].x<0||snake[snakeCount-1].y<0){
+			alert("撞墙了,老铁!");
+			//刷新界面
+			window.location.reload();
+		}
+		//判断自身,遍历蛇身上所有的坐标,判断是否与蛇头重叠
+		/*for(var i=0;i<snakeCount-1;i++){		
+				if(snake[snakeCount-1].x == snake[i].x&&snake[snakeCount-1].y == snake[i].y){
+					alert("咬到自己肉啦!");
+					window.location.reload();
+				}
+		}*/
+	}
+	//吃食物
+	function isEat(){
+		if(snake[snakeCount-1].x==foodX&&snake[snakeCount-1].y==foodY){
+			//吃到一个食物就重新调用生产食物
+			addFood();
+			//蛇身体加长
+			snakeCount++;
+			//在蛇屁股后加长
+			snake.unshift({x:-20,y:-20});
+		}
+	}
+	//当前界面加载完成执行
+	window.onload=function () {
+		start();
+		btnstart();
+	}
+  </script>
+ </body>
+</html>
