@@ -49,7 +49,7 @@ section div#home{
 	/*background:rgb(16,150,131);*/
 	position: relative;
 	width: 100%;
-	height: 90vh;
+	height: 94vh;
 }
 
 /*背景渐变*/
@@ -121,6 +121,9 @@ body{
 }
 
 div.item{
+	position: relative;
+	width: 100%;
+	height: 100%;
 	max-width: 800px;
 	max-height: 360px;
 }
@@ -136,10 +139,9 @@ div.item p{
 	font-weight:bolder;
 }
 div.item a{
-	display:inline-block;
+	display: block;
 	width: 100%;
 	height: 100%;
-	
 }
 div.item a img{
 	width: 100%;
