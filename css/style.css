@@ -1,0 +1,569 @@
+
+/*设置body的背景色*/
+body{
+	background:white;/*灰黑色背景*/
+}
+
+
+/*导航样式*/
+nav.navbar{
+	font-weight: bolder;
+	margin-bottom: 0px;
+}
+
+nav div.col-lg-6 ul{
+	position: fixed;/*导航栏固定在顶部*/
+	top: 0;
+	z-index: 1;
+}
+
+nav div.col-lg-6 ul>li.li_a_style>a{
+	color: white;
+}
+nav div.col-lg-6 ul>li.li_a_style>a:hover{
+	color:lightsalmon;
+}
+
+/*设置中心内容区模块样式*/
+section{
+	color: white;
+	overflow: hidden;/*超出部分隐藏*/
+	
+}
+/*设置屏幕宽度*/
+section>div{
+	display: flex;/*设置为弹性布局*/
+	flex-direction: column;		/* flex-direction 属性规定灵活项目的方向。column  灵活的项目将垂直显示*/
+	justify-content: center;	/* 弹性布局的左右居中对齐 */
+	align-items: center;		/*弹性布局的垂直居中对齐*/
+	text-align: center;			/*文本居中*/
+	width: 100%;
+	height:100vh;/*占据全屏*/
+	
+}
+
+/*设置每一模块的背景图片*/
+section div#home{
+	/*图片位置   不拉伸	居中  居中  覆盖 */
+	display: flex;/*设置为弹性布局*/
+	/*background:rgb(16,150,131);*/
+	position: relative;
+	width: 100%;
+	height: 90vh;
+}
+
+/*背景渐变*/
+#wrap{			
+	width: 100px;
+	height: 100px;
+	margin: 50px;
+	position:absolute;
+	top: 20px;
+	left: 30px;
+	
+}
+body{
+	position: relative;
+	-webkit-animation: atmoweather 8s linear infinite;
+	-moz-animation: atmoweather 8s linear infinite;
+	-ms-animation: atmoweather 8s linear infinite;
+}
+#wrap .sun{
+	width: 100px;
+	height: 100px;
+	border-radius:50% ;
+	background: #ffdd1a;
+}
+#wrap .moon{
+	position: absolute;
+	top: 70px;
+	left: 100px;
+	width: 100px;
+	height: 100px;
+	border-radius:50% ;
+	background: skyblue;
+	-moz-animation: move 8s linear infinite,atmoweather 8s linear infinite;
+	-webkit-animation:  move 8s linear infinite,atmoweather 8s linear infinite;
+	-ms-animation:  move 8s linear infinite,atmoweather 8s linear infinite;				
+}
+@-webkit-keyframes move{
+	0%{top:70px;left:110px;}
+	45%{top:0px;left: 0px;}
+	50%{top:0px;left: 0px;}
+	100%{top:-70px;left: -50px;}
+}
+@-moz-keyframes move{
+	0%{top:70px;left:110px;}
+	45%{top:0px;left: 0px;}
+	50%{top:0px;left: 0px;}
+	100%{top:-70px;left: -50px;}
+}
+@-ms-keyframes move{
+	0%{top:70px;left:110px;}
+	45%{top:0px;left: 0px;}
+	50%{top:0px;left: 0px;}
+	100%{top:-70px;left: -50px;}
+}
+@-webkit-keyframes atmoweather{
+	0%{background-color: skyblue;}
+	50%{background-color: black;}
+	100%{background-color: skyblue;}
+}
+@-moz-keyframes atmoweather{
+	0%{background-color: skyblue;}
+	50%{background-color: black;}
+	100%{background-color: skyblue;}
+}
+@-ms-keyframes atmoweather{
+	0%{background-color: skyblue;}
+	50%{background-color: black;}
+	100%{background-color: skyblue;}
+}
+
+div.item{
+	max-width: 800px;
+	max-height: 360px;
+}
+div.item h4{
+	font-size: 2rem;
+	color:gainsboro;
+}
+div.item:nth-child(1) p{
+	font-weight: 100;
+}
+div.item p{
+	font-size: 1.5rem;
+	font-weight:bolder;
+}
+div.item a{
+	display:inline-block;
+	width: 100%;
+	height: 100%;
+	
+}
+div.item a img{
+	width: 100%;
+	height: 100%;
+}
+/*关于我样式设计*/
+section div#about{
+	background:rgb(138,106,100);
+}
+
+div#about div.col-lg-6 p{
+	font-size: 1.6rem;
+	text-align: left;
+}
+div#persion_info{
+	margin-bottom: 10px;
+}
+div#persion_info div.div_img>h3{
+	
+}
+div#persion_info div.div_img>img{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+}
+div#persion_info div.col-lg-6 ul.ul_style{
+	padding: 0;
+	margin: 0;
+	display: inline-block;
+	list-style-type: none;
+	margin-top: 15px;
+	margin-bottom: 10px;
+}
+div#persion_info div.col-lg-6 ul.ul_style li{
+	width: 25%;
+}
+div#persion_info div.col-lg-6 ul.ul_style li>span{
+	margin: 0 auto;
+	display: block;
+	border: 1px solid white;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	line-height: 100px;
+	text-align: center;
+	margin-bottom: 5px;
+}
+div#persion_info div.col-lg-6 ul.ul_style li>p{
+	text-align: center;
+}
+/*设置动画*/
+/*@keyframes  myfirst{
+	0%{background: red;}
+	25%{background: orange;}
+	50%{background: yellow;}
+	75%{background: greenyellow;}
+	100%{background: blueviolet;}
+}*/
+/*动画名称   完成动画所耗费时间  动画曲线速度  何时开始默认为0   被播放次数默认为1  是否逆序播放默认normal  是否在运行时暂停默认是 "running"*/
+	/*animation:myfirst 3s linear 0 infinite alternate;*/
+div#persion_info ul li span:hover{
+	border-color: gainsboro;
+	transform: auto;
+	/* 水平偏移   垂直偏移  模糊距离   阴影尺寸  颜色  内外阴影（inset and outset） */
+	box-shadow: 0px 0px 10px 7px whitesmoke;
+	
+	
+}
+section div#persion_info ul li span i{
+	font-size: 6rem;
+	line-height: 100px;
+	cursor:pointer;/*鼠标箭头变成手指*/
+}
+section div#persion_info ul li span i:nth-child(1){
+	color:whitesmoke;
+}
+section div#persion_info ul li p{
+	font-weight: bolder;
+}
+
+
+
+
+
+/*技能区域*/
+section div#major{
+	background:rgb(75,92,150);
+}
+section div#major div#skill{
+	height: 300px;
+	margin-bottom: 30px;
+}
+section div#major div#skill span#span_ul{
+	display: block;
+	width: 260px;
+	height: 260px;
+	position: relative;
+	margin: 0 auto;
+	left: 0;
+	top: 0;
+	border-radius:50% ;
+	transform: rotateX( 0deg) rotateY(0deg) rotateZ(0deg);
+	animation: moves 10s linear 0s infinite  normal;
+	border: 3px dashed darkgrey;
+}
+
+@keyframes moves{
+				from{transform: rotateX( 0deg) rotateY(0deg) rotateZ(0deg);}
+				to{transform: rotateX( 0deg) rotateY(0deg) rotateZ(360deg);}
+			}
+			
+div#skill span#span_ul span,span#span_ul2 span{
+	width: 50px;
+	height: 50px;
+	border-radius:50% ;
+	display: block;
+	border: 1px solid rgb(75,92,150);
+	text-align: center;
+	line-height: 50px;
+}
+
+div#skill span#span_ul span>p,span#span_ul2 span>p{
+	font-size: 12px;
+}
+
+div#skill span#span_ul span>p{
+	animation: moves2 10s linear 0s infinite  normal;
+}
+
+div#skill span#span_ul2 span>p{
+	animation: moves 10s linear 0s infinite  normal;
+}
+
+
+div#skill span#span_ul span:nth-child(1){
+	background:rgba(255,99,71,0.8);
+	position: relative;
+	left: 60px;
+	top: -20px;
+}
+
+div#skill span#span_ul span:nth-child(2){
+	background:rgba(210,180,140,0.8);
+	position: relative;
+	left: -25px;
+	top: 15px;
+}
+div#skill span#span_ul span:nth-child(3){
+	background: rgba(0,128,128,0.8);
+	position: relative;
+	left: -10px;
+	top: 70px;
+}
+div#skill span#span_ul span:nth-child(4){
+	background: rgba(216,191,216,0.8);
+	position: relative;
+	left:90px;
+	top: 82px;
+}
+div#skill span#span_ul span:nth-child(5){
+	background: rgba(64,224,208,0.8);
+	position: relative;
+	left: 200px;
+	top: -5px;
+}
+div#skill span#span_ul span:nth-child(6){
+	background: rgba(225,95,180,0.8);
+	position: relative;
+	left: 232px;
+	top: -170px;
+}
+div#skill span#span_ul span:nth-child(7){
+	background: rgba(240,118,128,0.8);
+	position: relative;
+	left:167px;
+	top: -312px;
+}
+
+div#major div#skill span#span_ul2{
+	display: block;
+	border: 2px solid deepskyblue;
+	width: 160px;
+	height: 160px;
+	position: relative;
+	top: -210px;
+	left: 0;
+	margin: 0 auto;
+	border-radius:50% ;
+	/*动画名称  花费时间  动画速度  延迟  次数  是否反向播放 alternate*/
+	animation: moves2 10s linear 0s infinite  normal;
+	border: 3px dashed darkgray;
+}
+@keyframes moves2{
+			from{transform: rotateX( 0deg) rotateY(0deg) rotateZ(360deg);}
+			to{transform: rotateX( 0deg) rotateY(0deg) rotateZ(0deg);}
+		}
+			
+div#major div#skill span#span_ul2 span{
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+}
+div#major div#skill span#span_ul2 span:nth-child(1){
+	background-color: rgba(169,123,112,0.8);
+	position: relative;
+	top: -20px;
+	left: 60px;
+}
+div#major div#skill span#span_ul2 span:nth-child(2){
+	background-color: rgba(68,78,81,0.8);
+	position: relative;
+	top: -5px;
+	left: -15px;
+}
+div#major div#skill span#span_ul2 span:nth-child(3){
+	background-color: rgba(152,186,204,0.8);
+	position: relative;
+	top: 45px;
+	left: 15px;
+}
+div#major div#skill span#span_ul2 span:nth-child(4){
+	background-color: rgba(76,166,144,0.8);
+	position: relative;
+	top: 0px;
+	left: 110px;
+}
+div#major div#skill span#span_ul2 span:nth-child(5){
+	background-color: rgba(142,99,110,0.8);
+	position: relative;
+	top: -125px;
+	left: 135px;
+}
+
+
+section div#major div#skill_Info{
+	padding: 5px;
+	font-size: 14px;
+	font-weight: bolder;
+	color:gainsboro;
+}
+
+
+/*项目区域*/
+section div#projects{
+	background:rgb(135,178,167);
+	padding-bottom: 35px;
+	min-height: 1050px;/*设置高度*/
+}
+section div#projects h2{
+	display: inline-block;
+	color: white;
+	font-size:3rem;
+}
+section div#projects div.pro_img{
+	width: 100%;
+	height: 100%;
+	max-width: 260px;
+	max-height: 180px;
+	cursor:pointer;/*鼠标箭头变成手指*/
+	margin: 7px 0px;
+	/* 水平偏移   垂直偏移  模糊距离   阴影尺寸  颜色  内外阴影（inset and outset） */
+	
+}
+section div#projects div.pro_img a{
+	width: 100%;
+	height: 80%;
+	display: block;
+}
+section div#projects div.pro_img span{
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	border-radius: 5px;
+}
+/*添加一层,制造透明层次*/
+section div#projects div.pro_img a:hover::after{
+	padding: 60px 0px;
+	border: 1px solid gainsboro;
+	border-radius: 5px;
+	content:"点击查看";
+	display:block;
+	color: white;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.3);/*背景设置透明程度*/
+	position: absolute;/*子元素绝对定位*/
+	top: 0;
+	left:0;
+	font-size: 2rem;
+}
+section div#projects div.pro_img img{
+	max-width: 260px;
+	max-height: 160px;
+	min-height: 160px;
+	width: 100%;
+	border-radius: 5px;
+	
+}
+section div#projects div.pro_img p{
+	margin-top: 2px;
+}
+/*经历区域*/
+section div#experience{
+	background:rgb(190,105,89);
+}
+
+
+/*联系区域*/
+section div#link_me{
+	background:rgba(0,0,0,0.5);
+}
+section div#link_me div.link_info{
+	max-width: 540px;
+	max-height: 470px;
+	min-width: 340px;
+	min-height: 360px;
+	margin: 0 auto;
+	border: 8px solid rgb(255,210,0);
+}
+section div#link_me div.link_info h1{
+	width: 85%;
+	margin: 10px auto;
+	color:rgb(255,210,0);
+	font-weight: bolder;
+	padding: 10px;
+	border-bottom: 1px solid rgb(255,210,0);
+}
+section div#link_me div.link_info h1 span{
+	color: white;
+}
+section div#link_me div.link_info h3 span{
+	margin-left: 10px;
+	margin-right: 10px;
+	color: white;
+}
+section div#link_me div.link_info h3 span:nth-child(1){
+	color: orangered;
+}
+section div#link_me div.link_info h3 span:nth-child(2){
+	color: lightgreen;
+}
+section div#link_me div.link_info h3 span:nth-child(3){
+	color: lightskyblue;
+}
+section div#link_me div.link_info h3 span:nth-child(4){
+	color: gainsboro;
+}
+section div#link_me div.link_info div.div_p_style{
+	margin-top: 25px;
+}
+section div#link_me div.link_info div.div_p_style p{
+	font-size: 1.8rem;
+}
+div.link_img ul{
+	padding: 0;
+	margin: 0;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	list-style-type: none;
+	display: inline-block;
+	
+}
+div.link_img ul li{
+	position: relative;
+	float: left;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+/*设置图片位置，父类使用绝对定位，子类使用相对定位让图片在上边显示*/
+div.link_img div.box{
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	top:-102px;
+	left: -30px;
+	display:none;
+}
+div.link_img div.box p{
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	background-color: cornflowerblue;
+	border-radius: 3px;
+	position: absolute;
+	top: 60px;
+}
+/*画一个倒三角*/
+div.link_img div.box p>span{
+	width:0;
+	height:0;
+	display: block;
+	border-width: 8px;
+	border-radius: 1px;
+	border-style: solid;
+	 /*border-color的四个值代表上右下左，分别实现下左上右箭头 */
+	border-color: cornflowerblue transparent transparent  transparent;
+	position: absolute;
+	left: 40px;
+}
+
+div.link_img div.box img{
+	width: 100%;
+	height: 100%;
+}
+div.link_img li.nav-item>span{
+	display: block;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	border: 1px solid gainsboro;
+	cursor:pointer;/*鼠标箭头变成手指*/
+}
+div.link_img li.nav-item>span>a{
+	color: white;
+}
+div.link_img li.nav-item>span:hover{
+	border: 2px solid deepskyblue;
+	background-color:rgba(0,0,0,0.8);
+}

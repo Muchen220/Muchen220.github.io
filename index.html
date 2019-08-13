@@ -1,11 +1,437 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="UTF-8">
-		<title>Git and GitHub</title>
+		<meta charset="utf-8" />
+		<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+		<!--引入jquery-->
+		<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+		<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+		<!--引入smooth-->
+		<script src="https://cdn.bootcss.com/smooth-scroll/16.1.0/smooth-scroll.min.js"></script>
+		<!--引入字体图标库-->
+		<link rel="stylesheet" href="css/font-awesome.min.css" />
+		<!--引入wow.js 和 animate.css文字效果-->
+		<script src="https://cdn.bootcss.com/wow/1.1.2/wow.min.js"></script>
+		<link href="https://cdn.bootcss.com/animate.css/3.7.2/animate.min.css" rel="stylesheet">
+		<!--引入自己的css和js-->
+		<link rel="stylesheet" href="css/time.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<script type="text/javascript" src="js/main.js" ></script>
+		<title>my_demo</title>
 	</head>
 	<body>
-		this is Git！！
-		this is new git!!12
+		<!--顶部导航-->
+		<nav class="navbar navbar-inverse">
+		  	<div class="container">
+		  		 <div class="navbar-header">
+				    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#MenuCollapse" aria-expanded="false">
+				       <span class="sr-only">Toggle navigation</span>
+				       <span class="icon-bar"></span>
+				       <span class="icon-bar"></span>
+				       <span class="icon-bar"></span>
+				     </button>
+     				 <a class="navbar-brand" href="#"><i class="glyphicon glyphicon-fire"></i>Muchen</a>
+    			</div>
+    			<div class="collapse navbar-collapse" id="MenuCollapse">
+    				<div class="col-lg-3"></div>
+    				<div class="col-lg-6">
+    					<ul class="nav navbar-nav">
+	    				 	<li class="li_a_style"><a href="#home">主页</a></li>
+	    				 	<li class="li_a_style"><a href="#about">关于我</a></li>
+	    				 	<li class="li_a_style"><a href="#major">技术栈</a></li>
+	    				 	<li class="li_a_style"><a href="#projects">作品集</a></li>
+	    				 	<li class="li_a_style"><a href="#experience">经历轴</a></li>
+	    				 	<li class="li_a_style"><a href="#link_me">联系我</a></li>
+    					</ul>
+    				</div>
+    				<div class="col-lg-3"></div>
+    			</div>
+		  	</div>
+		</nav>
+		
+		<!--中心内容区域-->
+		<section>
+			<div id="home">
+				<div id="wrap">
+					<div class="sun"></div>
+					<div class="moon"></div>
+				</div>
+				<div class="pictures_show">
+					<div id="slidershow" class="carousel slide" data-ride="carousel">
+				    <!-- 设置图片轮播计数器 -->
+				    	<ol class="carousel-indicators">
+				       		<li class="active" data-target="#slidershow" data-slide-to="0"></li>
+					        <li data-target="#slidershow" data-slide-to="1"></li>
+					        <li data-target="#slidershow" data-slide-to="2"></li>
+					        <li data-target="#slidershow" data-slide-to="3"></li>
+				   		 </ol>
+					    <!-- 设置轮播图片 -->
+					    <div class="carousel-inner" style="box-shadow:0 0 10px 2px #000;">
+						   <div class="item active">
+						        <a href="#">
+						            <img src="img/7.jpg">
+						        </a>
+						       
+						        <div class="carousel-caption">
+						        	<h4>Hello,I’m Muchen</h4>
+						            <p>
+						            	Pursue your object, be it what it will, steadily and indefatigably. <br />
+						            	我叫邓勇强 <br />
+						            	一名前端工程师<br />
+						            	muchen220@foxmail.com<br/>
+						            </p>
+						        </div>
+						    </div>
+						    <div class="item">
+						        <a href="#">
+						            <img src="img/13.png"  >
+						        </a>
+						        <div class="carousel-caption">
+						        	<p>
+						        		莫听穿林打叶声，<br />
+						        		何妨吟啸且徐行。<br />
+						        		竹杖芒鞋轻胜马，<br />
+						        		谁怕？<br />
+						        		一蓑烟雨任平生。<br />
+						        		<br />
+						        	</p>
+						        </div>
+						    </div>    
+						    <div class="item">
+						         <a href="#">
+						            <img src="img/2.jpg"  >
+						        </a>
+						        <div class="carousel-caption">
+						        	<p>
+						        	   有事者，事竟成；<br />
+						        	   破釜沉舟，百二秦关终归楚；<br />
+						        	   苦心人，天不负；<br />
+						        	   卧薪尝胆，三千越甲可吞吴。
+						        	  <br /><br />
+						        	</p>
+						        </div>
+						    </div>
+						     <div class="item">
+						         <a href="#">
+						            <img src="img/14.png"  >
+						        </a>
+						        <div class="carousel-caption">
+						        	<p>
+						        		未来是丰满的，<br />
+						        		现实是骨感的。<br />
+						        		我坚信此刻扎实地积累营养，<br />
+						        		梦想就会茁壮成长。<br />
+						        		<br /><br />
+						        	</p>
+						        </div>
+						    </div>    
+						        
+						          <!-- 设置轮播图片控制器 -->
+							    <a class="left carousel-control" href="#slidershow" role="button"
+							       data-slide="prev">
+							        <span class="glyphicon glyphicon-chevron-left"></span>
+							    </a>
+							    <a class="right carousel-control" href="#slidershow" role="button"
+							       data-slide="next">
+							        <span class="glyphicon glyphicon-chevron-right"></span>
+							    </a>     
+						</div>
+				    </div>
+				</div>
+			</div>
+			
+			
+			<!--关于我区域-->
+			<div id="about">
+				<div class="container-fluidr">
+					<div class="row">
+						<div id="persion_info">
+							<div class="div_img">
+								<img src="img/1_qq_40976321.jpg.png"  class="span3 wow bounceInRight" />
+								<h3  class="span3 wow bounceInLeft" data-wow-delay="0.5">关于我</h3>
+							</div>
+							<div class="col-lg-3"></div>
+							<div class="col-lg-6 span3 wow bounceInDown center" data-wow-delay="1s">
+								<ul class="ul_style col-lg-12">
+									<li class="col-lg-3 col-sm-12 col-xs-12">
+										<span><i class="glyphicon glyphicon-heart"></i></span>
+										<p>年龄/22</p>
+									</li>
+									<li class="col-lg-3 col-sm-12 col-xs-12">
+										<span><i class="glyphicon glyphicon-education"></i></span>
+										<p>学历/大专(毕业)</p>
+									</li>
+									<li class="col-lg-3 col-sm-12 col-xs-12">
+										<span><i class="glyphicon glyphicon-globe"></i></span>
+										<p>坐标/长沙</p>
+									</li>
+									<li class="col-lg-3 col-sm-12 col-xs-12">
+										<span><i class="glyphicon glyphicon-sunglasses"></i></span>
+										<p>状态/离职</p>
+									</li>
+								</ul>
+							</div>
+							<div class="col-lg-3"></div>
+						</div>	
+					</div>
+					
+					<div class="col-lg-3"></div>
+					<div class="col-lg-6 span3 wow bounceInUp center" data-wow-delay="2s">
+						<p class="p_style">&nbsp;&nbsp;&nbsp;&nbsp;  您好，我叫邓勇强，坐标长沙。我是一名计算机软件开发专业，对前端很感兴趣，今后的职业规划是朝着全栈发展，
+							目前在学习python、Node.js、React.js。在实习的五个月来，在公司主要参与项目需求分析和项目构建;根据产品经理原型图设计Oracle数据库表；
+							优化项目，改写sql查询语句；提高系统的性能;参与对前后端数据交互使用加密算法加密，保证系统的安全性；
+						</p>
+						<p class="p_style">&nbsp;&nbsp;&nbsp;&nbsp;不浮躁，喜欢前端，执行力，学习能力都还不错！目前，能做点粗糙设计（比如本网站）。</p>
+					</div>
+					<div class="col-lg-3"></div>	
+				</div>
+			</div>
+			
+			<!--技能区域-->
+			<div id="major">
+				<div class="container col-lg-8">
+					<div class="col-lg-6 col-md-12 col-xs-12">
+						<div id="skill" class="span3 wow rollIn" data-wow-delay="0.5s" data-wow-duration="1s">
+							<span id="span_ul">
+								<span><p>JS</p></span>
+								<span><p>Vue.js</p></span>
+								<span><p>Vuex</p></span>
+								<span><p>HTML5</p></span>
+								<span><p>CSS3</p></span>
+								<span><p>BootStrap</p></span>
+								<span><p>JQuery</p></span>
+							</span>
+							<span id="span_ul2">
+								<span><p>Npm</p></span>
+								<span><p>Git</p></span>
+								<span><p>Json</p></span>
+								<span><p>Java</p></span>
+								<span><p>MySQL</p></span>
+							</span>
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-12 col-xs-12 row" >
+						<div id="skill_Info" class="span3 wow bounceInRight" data-wow-delay="1.5s" data-wow-duration="1s">
+							<p>
+								<!--延迟3秒后播放animate中的bounce上下跳动动画。-->
+								<p class="animated bounce delay-2s">熟练运用bootStrap前端库和vue框架，熟悉vue全家桶（vue-route,vue-resource,Vuex,Axios）</p>
+								<p class="animated heartBeat delay-3s">熟练掌握HTML5+CSS3、javaScript、JQuery等前端开发技术，熟悉ES6的语法用法，页面架构设计和布局</p>
+								<p class="animated tada delay-4s">熟悉ajax/json等后台交互技术</p>
+								<p class="animated heartBeat delay-5s">熟练运用npm包管理工具、Git、SVN等版本管理工具，webpack、gulp打包工具	</p>
+								<p class="animated heartBeat delay-5s">熟悉SQL_server、Oracle和MySQL数据库</p>
+								<p class="animated tada delay-4s">熟悉Java和SSM等框架技术</p>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!--作品区域-->
+			<div id="projects">
+				<div class="container span3 wow bounceInDown center" data-wow-duration="1s">
+					<h2>作品集</h2>
+					<p style="margin-top: -10px;">works show</p>
+				</div>
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+							<div class="pro_img span3 wow rollIn center" data-wow-delay="0.5s">
+								<img src="img/project_001.png"/>
+								<a href="#">
+									<span></span>
+								</a>
+								<p>我的简历网站</p>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+							<div class="pro_img span3 wow bounceInRight" data-wow-delay="1s">
+								<img src="img/project_002.png"/>
+								<a>
+									<span></span>
+								</a>
+								<p>作品一</p>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+							<div class="pro_img span3 wow bounceInDown center" data-wow-delay="1.5s">
+								<img src="img/project_01.png"/>
+								<a href="https://github.com/Muchen220/Muchen220.github.io/tree/master/vcustomers" target="_blank">
+									<span></span>
+								</a>
+								<p>作品二</p>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+							<div class="pro_img span3 wow bounceInRight" data-wow-delay="2s">
+								<img src="img/project_02.png"/>
+								<a href="https://muchen220.github.io/BootStrap4_project/" target="_blank">
+									<span></span>
+								</a>
+								<p>作品三</p>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+							<div class="pro_img span3 wow bounceInLeft" data-wow-delay="2.5s">
+								<img src="img/project_04.png"/>
+								<a href="https://muchen220.github.io/个人博客开发/login.html" target="_blank">
+									<span></span>
+								</a>
+								<p>作品四</p>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+							<div class="pro_img span3 wow bounceInUp center" data-wow-delay="3s">
+								<img src="img/project_06.png"/>
+								<a href="https://muchen220.github.io/game/五子棋.html" target="_blank">
+									<span></span>
+								</a>
+								<p>作品五</p>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+							<div class="pro_img span3 wow bounceInUp center" data-wow-delay="3s">
+								<img src="img/project_03.png"/>
+								<a href="https://muchen220.github.io/BootStrap实战--新闻网站/index.html" target="_blank">
+									<span></span>
+								</a>
+								<p>作品六</p>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+							<div class="pro_img span3 wow bounceInRight" data-wow-delay="2.5s">
+								<img src="img/project_07.png"/>
+								<a href="https://muchen220.github.io/hongpeng/index.html" target="_blank">
+									<span></span>
+								</a>
+								<p>作品七</p>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			
+			</div>
+			
+			<!--项目区域-->
+			<div id="experience">
+				<div id="timeline">
+					<h1>我的经历</h1>
+					<div class="demo-card-wrapper">
+					    <div class="demo-card demo-card--step1 span3 wow bounceInLeft" data-wow-delay="0.5s" >
+					      <div class="head">
+					        <div class="number-box"></div>
+					        <h3>深圳市世纪伟图科技开发有限公司</h3>
+					        <p>后端开发实习生(2018.12-2019.5)</p>
+					      </div>
+					      <div class="body" id="body1">
+					        	<p>
+						        	<strong>框架</strong>：Spring+Strus2+iBatis+Maven+JSP+Tomcat6.0+Oracle11g <br />
+									<strong>开发工具</strong>：Spring Tool suite ,PL/SQL <br />
+									<strong>工作职责</strong>: <br />
+											1、 参与项目需求分析和项目的构建；<br />
+					     					2、根据产品经理原型图设计Oracle数据库表；<br />
+					      					3、优化项目，改写sql查询语句，提高系统的性能<br />
+					      					4、对前后端数据交互使用加密算法加密，保证系统的安全性<br />
+					        	</p>
+					      </div>
+					    </div>
+					
+					    <div class="demo-card demo-card--step2 span3 wow bounceInRight" data-wow-delay="1s">
+					      <div class="head">
+					        <div class="number-box"></div>
+					        <h3>毕业于湖南信息职业技术学院</h3>
+					        <p>（2016.9-2019.6）</p>
+					      </div>
+					      <div class="body" id="body2" style="height: 230px;">
+					        <div>
+					        	<p>
+					        		2018年春季获《亲爱的宝贝》40公里毅行荣誉证书
+					        	</p>
+					        	<p>
+									2017年春季获《百公里毅行》荣誉证书
+								</p>
+								<p>
+									2017年高校网络安全管理运维赛获华中区三等奖证书
+								</p>
+								<p>
+									2017年大学英语三级证书
+					        	</p>
+					        </div>
+					      </div>
+					    </div>
+					 </div>
+					</div>
+				</div>
+			
+			<div id="link_me">
+				<div class="container span3 wow bounceInUp center" data-wow-delay="0.5s">
+					<div class="link_info">
+						<h1>CONTACT  <span>FOR ME</span></h1>
+						<h3>
+							<span>灵感</span>
+							<span>代码</span>
+							<span>梦想</span>
+							<span>未来</span>
+						</h3>
+						<div class="div_p_style">
+							<p>学习是一个充实愉悦的过程</p>
+							<p>喜欢尝试，期待新鲜事物</p>
+							<p>前端即兴趣，兴趣即未来</p>
+							<p>行路有良友，便是捷径</p>
+							<p>期待有机会与您共事！</p>
+						</div>
+						<div class="link_img">
+							<ul class="nav-navbar">
+								<li class="nav-item">
+									<div class="box" id="box1" onmouseover="display(1)" onmouseout="disappear(1)">
+										<p>my github <span></span></p>
+									</div>
+									<span onmouseover="display(1)" onmouseout="disappear(1)">
+										<a href="https://github.com/Muchen220" target="_blank">
+											<i class="icon-github-alt"></i>
+										</a>
+									</span>
+								</li>
+								<li class="nav-item">
+									<div class="box" id="box2" onmouseover="display(2)" onmouseout="disappear(2)">
+										<p>my csdn <span></span></p>
+									</div>
+									<span onmouseover="display(2)" onmouseout="disappear(2)">
+										<a href="https://blog.csdn.net/qq_40976321" target="_blank">
+											<i class="icon-book"></i>
+										</a>
+									</span>
+								</li>
+								<li class="nav-item">
+									<div class="box" id="box3" onmouseover="display(3)" onmouseout="disappear(3)">
+										<img src="img/weChat_img.jpg" />
+									</div>
+									<span onmouseover="display(3)" onmouseout="disappear(3)">
+										<i class="icon-comments-alt"></i>
+									</span>
+								</li>
+								<li class="nav-item">
+									<div class="box" id="box4" onmouseover="display(4)" onmouseout="disappear(4)">
+										<img src="img/qq_img.jpg" />
+									</div>
+									<span onmouseover="display(4)" onmouseout="disappear(4)">
+										QQ
+									</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+					
+				
+				</div>
+				
+			</div>
+		</section>
+		<!--//实例化wow.js-->
+		<script>
+				new WOW().init();
+		</script>
 	</body>
 </html>
