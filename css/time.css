@@ -50,7 +50,6 @@
 		#timeline h1 {
 		  text-align: center;
 		  font-size: 3rem;
-		  font-weight: bolder;
 		}
 		/*时光轴线*/
 		#timeline .demo-card-wrapper {
@@ -63,7 +62,7 @@
 		    display: flex;
 		    flex-flow: column wrap;
 		    width: 1170px;
-		    height:90vh;
+		    height:88vh;
 		    margin: 0 auto;
 		  }
 		}
@@ -105,7 +104,7 @@
 		@media (min-width: 1000px) {
 		  #timeline .demo-card {
 		    max-width: 450px;
-		    height: 400px;
+		    height: 360px;
 		    margin: 90px;
 		    margin-top: 45px;
 		    margin-bottom: 45px;
