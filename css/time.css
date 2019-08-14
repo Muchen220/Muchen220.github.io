@@ -46,7 +46,7 @@
 		#timeline {
 		  padding:2px;
 		  background:rgb(190,105,89);
-		  height: 100vh;
+		  height: 101vh;
 		  border: 2px solid red;
 		}
 		#timeline h1 {
@@ -87,7 +87,6 @@
 		}
 		
 		#timeline .demo-card {
-		border: 1px solid;
 		  position: relative;
 		  display: block;
 		  margin: 25px auto;/*缩小时居中显示*/

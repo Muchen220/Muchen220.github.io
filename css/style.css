@@ -149,8 +149,12 @@ div.item a img{
 section div#about{
 	background:rgb(138,106,100);
 }
+section div#about div.container:nth-child(1){
+	width: 100%;
+	padding-top: 10px;
+}
 
-div#about div.col-lg-6 p{
+div#about div.col-lg-4 p{
 	font-size: 1.4rem;
 	text-align: left;
 }
@@ -165,7 +169,7 @@ div#persion_info div.div_img>img{
 	height: 100px;
 	border-radius: 50%;
 }
-div#persion_info div.col-lg-6 ul.ul_style{
+div#persion_info div.col-lg-4 ul.ul_style{
 	padding: 0;
 	margin: 0;
 	display: inline-block;
@@ -173,10 +177,10 @@ div#persion_info div.col-lg-6 ul.ul_style{
 	margin-top: 15px;
 	margin-bottom: 10px;
 }
-div#persion_info div.col-lg-6 ul.ul_style li{
+div#persion_info div.col-lg-4 ul.ul_style li{
 	width: 25%;
 }
-div#persion_info div.col-lg-6 ul.ul_style li>span{
+div#persion_info div.col-lg-4 ul.ul_style li>span{
 	margin: 0 auto;
 	display: block;
 	border: 1px solid white;
@@ -187,7 +191,7 @@ div#persion_info div.col-lg-6 ul.ul_style li>span{
 	text-align: center;
 	margin-bottom: 5px;
 }
-div#persion_info div.col-lg-6 ul.ul_style li>p{
+div#persion_info div.col-lg-4 ul.ul_style li>p{
 	text-align: center;
 }
 /*设置动画*/
@@ -448,6 +452,7 @@ section div#projects div.pro_img p{
 /*经历区域*/
 section div#experience{
 	background:rgb(190,105,89);
+	height: 101vh;
 }
 
 
@@ -457,7 +462,7 @@ section div#link_me{
 }
 section div#link_me div.container{
 	width: 100%;
-	padding: 80px 0px;
+	padding: 100px 0px;
 }
 section div#link_me div.link_info{
 	max-width: 520px;
