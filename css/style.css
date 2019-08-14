@@ -376,7 +376,7 @@ div#major div#skill span#span_ul2 span:nth-child(5){
 	left: 135px;
 }
 section div#major div#skill_Info{
-	padding:30px;
+	padding: 20px 0px;
 	font-size: 1.4rem;
 	font-weight: bolder;
 	color:gainsboro;
@@ -458,7 +458,7 @@ section div#link_me{
 }
 section div#link_me div.container{
 	border: 2px solid red;
-	padding: 35px;
+	padding: 35px 0px;
 }
 section div#link_me div.link_info{
 	max-width: 520px;
