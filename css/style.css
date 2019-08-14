@@ -228,8 +228,8 @@ section div#persion_info ul li p{
 section div#major{
 	background:rgb(75,92,150);
 }
+
 section div#major div#skill{
-	border: 1px solid;
 	height: 300px;
 	padding: 30px;
 	margin-bottom: 20px;
@@ -381,7 +381,6 @@ section div#major div#skill_Info{
 	font-weight: bolder;
 	color:gainsboro;
 	margin: 0 auto;
-	border: 1px solid red;
 }
 
 

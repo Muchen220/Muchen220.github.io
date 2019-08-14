@@ -59,6 +59,7 @@
 		  margin: auto;
 		  border: 2px solid yellow;
 		  height: 93vh;
+		  overflow: hidden;
 		}
 		/*z最小窗口尺寸*/
 		@media (min-width: 1000px) {
@@ -90,7 +91,7 @@
 		  position: relative;
 		  display: block;
 		  margin: 25px auto;/*缩小时居中显示*/
-		  max-width: 94%;
+		  max-width:94%;
 		  z-index:1;
 		 /*  border: 5px solid red;*/
 		}
