@@ -77,12 +77,12 @@ body{
 	position: absolute;
 	top: 70px;
 	left: 100px;
-	width: 110px;
-	height: 110px;
+	width: 105px;
+	height: 105px;
 	border-radius:50% ;
 	background: skyblue;
 	-moz-animation: move 8s linear infinite,atmoweather 8s linear infinite;
-	-webkit-animation:  move 8s linear infinite,atmoweather 8s linear infinite;
+	-webkit-animation:move 8s linear infinite,atmoweather 8s linear infinite;
 	-ms-animation:  move 8s linear infinite,atmoweather 8s linear infinite;				
 }
 @-webkit-keyframes move{
@@ -151,12 +151,10 @@ section div#about{
 }
 
 div#about div.col-lg-6 p{
-	font-size: 1.6rem;
+	font-size: 1.4rem;
 	text-align: left;
 }
 div#persion_info{
-	padding-top: 30px;
-	padding-bottom: 10px;
 	margin-bottom: 10px;
 }
 div#persion_info div.div_img>h3{
@@ -231,8 +229,10 @@ section div#major{
 	background:rgb(75,92,150);
 }
 section div#major div#skill{
+	border: 1px solid;
 	height: 300px;
-	margin-bottom: 30px;
+	padding: 30px;
+	margin-bottom: 20px;
 }
 section div#major div#skill span#span_ul{
 	display: block;
@@ -376,10 +376,12 @@ div#major div#skill span#span_ul2 span:nth-child(5){
 	left: 135px;
 }
 section div#major div#skill_Info{
-	padding: 5px;
-	font-size: 14px;
+	padding:30px;
+	font-size: 1.4rem;
 	font-weight: bolder;
 	color:gainsboro;
+	margin: 0 auto;
+	border: 1px solid red;
 }
 
 
@@ -453,6 +455,10 @@ section div#experience{
 /*联系区域*/
 section div#link_me{
 	background:rgba(0,0,0,0.5);
+}
+section div#link_me div.container{
+	border: 2px solid red;
+	padding: 35px;
 }
 section div#link_me div.link_info{
 	max-width: 520px;
