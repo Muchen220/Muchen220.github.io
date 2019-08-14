@@ -46,8 +46,7 @@
 		#timeline {
 		  padding:2px;
 		  background:rgb(190,105,89);
-		  height: 101vh;
-		  border: 2px solid red;
+		  height: 105vh;
 		}
 		#timeline h1 {
 		  text-align: center;
@@ -57,7 +56,6 @@
 		#timeline .demo-card-wrapper {
 		  position: relative;
 		  margin: auto;
-		  border: 2px solid yellow;
 		  height: 93vh;
 		  overflow: hidden;
 		}
@@ -203,7 +201,7 @@
 			/*第一个长度*/
 			@media (min-width: 1100px) {
 			  #timeline .demo-card div#body2 {
-			    height:180px;
+			   max-height: 280px
 			  }
 			}
 			

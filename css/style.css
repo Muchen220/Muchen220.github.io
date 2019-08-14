@@ -170,9 +170,10 @@ div#persion_info div.div_img>img{
 	border-radius: 50%;
 }
 div#persion_info div.col-lg-4 ul.ul_style{
+	width: 100%;
 	padding: 0;
 	margin: 0;
-	display: inline-block;
+	display:inline-block;
 	list-style-type: none;
 	margin-top: 15px;
 	margin-bottom: 10px;
@@ -184,8 +185,12 @@ div#persion_info div.col-lg-4 ul.ul_style li>span{
 	margin: 0 auto;
 	display: block;
 	border: 1px solid white;
-	width: 100px;
-	height: 100px;
+	max-width: 100px;
+	max-height: 100px;
+	min-width: 80px;
+	min-height: 80px;
+	width: 80%;
+	height: 80%;
 	border-radius: 50%;
 	line-height: 100px;
 	text-align: center;
@@ -235,8 +240,7 @@ section div#major{
 
 section div#major div#skill{
 	height: 300px;
-	padding: 30px;
-	margin-bottom: 20px;
+	padding: 30px 0px;
 }
 section div#major div#skill span#span_ul{
 	display: block;
@@ -380,7 +384,7 @@ div#major div#skill span#span_ul2 span:nth-child(5){
 	left: 135px;
 }
 section div#major div#skill_Info{
-	padding: 20px 0px;
+	padding: 30px 0px;
 	font-size: 1.4rem;
 	font-weight: bolder;
 	color:gainsboro;
@@ -452,7 +456,7 @@ section div#projects div.pro_img p{
 /*经历区域*/
 section div#experience{
 	background:rgb(190,105,89);
-	height: 101vh;
+	height: 105vh;
 }
 
 
