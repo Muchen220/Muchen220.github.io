@@ -47,6 +47,7 @@
 		  padding:2px;
 		  background:rgb(190,105,89);
 		  height: 100vh;
+		  border: 2px solid red;
 		}
 		#timeline h1 {
 		  text-align: center;
@@ -56,6 +57,8 @@
 		#timeline .demo-card-wrapper {
 		  position: relative;
 		  margin: auto;
+		  border: 2px solid yellow;
+		  height: 93vh;
 		}
 		/*z最小窗口尺寸*/
 		@media (min-width: 1000px) {
@@ -63,7 +66,7 @@
 		    display: flex;
 		    flex-flow: column wrap;
 		    width: 1170px;
-		    height: 90vh;
+		    height: 93vh;
 		    margin: 0 auto;
 		  }
 		}

@@ -457,14 +457,14 @@ section div#link_me{
 	background:rgba(0,0,0,0.5);
 }
 section div#link_me div.container{
-	border: 2px solid red;
-	padding: 35px 0px;
+	width: 100%;
+	padding: 80px 0px;
 }
 section div#link_me div.link_info{
 	max-width: 520px;
 	max-height: 450px;
-	min-width: 240px;
-	min-height: 200px;
+	min-width:360px;
+	min-height: 440px;
 	margin: 0 auto;
 	border: 8px solid rgb(255,210,0);
 }
