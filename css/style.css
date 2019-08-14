@@ -155,6 +155,8 @@ div#about div.col-lg-6 p{
 	text-align: left;
 }
 div#persion_info{
+	padding-top: 30px;
+	padding-bottom: 10px;
 	margin-bottom: 10px;
 }
 div#persion_info div.div_img>h3{
@@ -262,7 +264,7 @@ div#skill span#span_ul span,span#span_ul2 span{
 }
 
 div#skill span#span_ul span>p,span#span_ul2 span>p{
-	font-size: 12px;
+	font-size:1.1rem;
 }
 
 div#skill span#span_ul span>p{
@@ -373,8 +375,6 @@ div#major div#skill span#span_ul2 span:nth-child(5){
 	top: -125px;
 	left: 135px;
 }
-
-
 section div#major div#skill_Info{
 	padding: 5px;
 	font-size: 14px;
